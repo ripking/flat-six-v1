@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #1c3123;
+  --background-light: #f9f7f2;
+  --background-dark: #161c18;
+}
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-background-light: var(--background-light);
+  --color-background-dark: var(--background-dark);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* Force a hardware-accelerated stacking context to fix Chrome rendering bug */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+}

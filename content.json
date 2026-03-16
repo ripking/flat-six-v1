@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "heading": "Where Heritage Meets Innovation.",
+    "subheading": "High-performance strategy consulting for the modern media landscape. We bridge the gap between traditional value creation and the latest digital transformation.",
+    "cta_button": "View Our Expertise"
+  },
+  "about": {
+    "heading": "Enduring Value. Modern Execution.",
+    "description": "We believe the most successful content is built like the world renowned Porsche flat-six engine: well-balanced, incredibly powerful, and engineered for the kind of enduring performance that turns creative vision into measurable, bottom-line success.\n\nFlat Six Media is a boutique consultancy providing executive caliber support across strategy, finance, and operations functions. We work with independent producers, production companies of all sizes, and major studios. We work across film, television, streaming, video games, sports, and live events. We are available for single engagements and ongoing support on retainer.",
+    "stats": [
+      {
+        "value": "$500M+",
+        "label": "Slate Funding Secured"
+      },
+      {
+        "value": "20+",
+        "label": "Years Experience"
+      },
+      {
+        "value": "8",
+        "label": "Franchises Created"
+      },
+      {
+        "value": "24/7",
+        "label": "Advisory Support"
+      }
+    ]
+  },
+  "founder": {
+    "subheading": "Founder & Principal",
+    "name": "Michael Rifkin",
+    "quote": "",
+    "paragraph1": "Michael is a seasoned media executive with nearly two decades of experience at the intersection of finance, strategy, and global distribution. Before founding Flat Six Media, Michael served as the Co-Head of Sony Pictures International Productions, where he oversaw finance and operations for a slate of 30+ films annually. His tenure at Sony also included senior leadership roles within Columbia Pictures’ Business Development group, where he was instrumental in the financial modeling and greenlighting of major franchises, including Spider-Man: Into the Spider-Verse, Jumanji, and Hotel Transylvania.",
+    "paragraph2": "Through Flat Six Media, Michael leverages his deep expertise in film ultimates and slate valuation to support a diverse range of clients, from independent production companies and institutional investors to major video game studios expanding into film. Whether acting as a fractional CFO for indie producers or providing underwriting support for multi-year co-financing deals, Michael provides the quantitative rigor and qualitative insight necessary to navigate the complexities of modern entertainment investment. A recognized industry expert, he has contributed to foundational texts on business valuation and frequently guest lectures at the USC Marshall School of Business on the mechanics of the studio system."
+  },
+  "footer_cta": {
+    "heading": "Ready to transform your media strategy?",
+    "description": "Join the ranks of the world's most innovative media brands and studios. Let's build your future narrative today.",
+    "button": "Book a Consultation"
+  },
+  "services": [
+    {
+      "id": 1,
+      "title": "Market Intelligence",
+      "description": "Deep-dive analytics into competitive landscapes and trend forecasting for your film or television show. A valuable service before it hits the screen, or after the release",
+      "icon": "insights"
+    },
+    {
+      "id": 2,
+      "title": "Fractional CFO/COO",
+      "description": "Fractional CFO and COO services for your content production company. Deeply experienced at the studio and independent level.",
+      "icon": "finance"
+    },
+    {
+      "id": 3,
+      "title": "Expert Witness",
+      "description": "Expert Witness services for a variety of purposes, including litigation support, arbitration, and mediation. Experienced at a federal level.",
+      "icon": "balance"
+    },
+    {
+      "id": 4,
+      "title": "Franchise Development",
+      "description": "Experienced in franchise development and growth. Let's develop your next IP today.",
+      "icon": "hub"
+    },
+    {
+      "id": 5,
+      "title": "Slate Financing",
+      "description": "Expert experience in providing underwriting support to institutional investors for slate financing transactions.",
+      "icon": "account_balance"
+    },
+    {
+      "id": 6,
+      "title": "Greenlight Support",
+      "description": "Robust greenlight analysis for your film or television show. Support investment for financiers, or get an analysis of your backend.",
+      "icon": "rocket_launch"
+    },
+    {
+      "id": 7,
+      "title": "AI Integration",
+      "description": "Help your content business automate repetitive processes with a domain expertise suited for your needs.",
+      "icon": "memory"
+    },
+    {
+      "id": 8,
+      "title": "Business Planning",
+      "description": "We can develop a business plan, forecast, and investor materials for your entertainment business.",
+      "icon": "business_center"
+    },
+    {
+      "id": 9,
+      "title": "Library Valuations",
+      "description": "We have extensive experience valuing film and television libraries. Let us help you determine your library's value and sell it.",
+      "icon": "video_library"
+    }
+  ],
+  "expertise": [
+    {
+      "id": 1,
+      "title": "Content Strategy",
+      "description": "20+ years of experience, evaluating thousands of films and tv shows for studio and independent financing. Services available for individual titles, libraries, and slates.",
+      "icon": "strategy"
+    },
+    {
+      "id": 2,
+      "title": "Finance & Operations",
+      "description": "Over 10 years of executive level experience managing multi-national orgnaizatiions with a proven track record of increasing top line revenue and successfully expanding into new international territories",
+      "icon": "leaderboard"
+    },
+    {
+      "id": 3,
+      "title": "Scalable Support",
+      "description": "Ability to offer long-term partnerships or 'one-off' strategic projects to suit our clients needs. We'll work with you.",
+      "icon": "handshake"
+    }
+  ],
+  "navigation": [
+    {
+      "label": "Expertise",
+      "href": "#expertise"
+    },
+    {
+      "label": "Services",
+      "href": "#services"
+    },
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Team",
+      "href": "#vision"
+    }
+  ],
+  "images": {
+    "logo": "/images/logo-2.png",
+    "hero": "/images/hero3.png",
+    "feature": "/images/feature.jpg",
+    "portrait": "/images/portrait2.jpg"
+  }
+}
