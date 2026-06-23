@@ -16,7 +16,7 @@ export function Hero() {
     >
       {/* Full-bleed hero photograph */}
       <img
-        src="/images/hero3.png"
+        src="/images/hero-cover.jpg"
         alt=""
         aria-hidden="true"
         style={{
