@@ -25,7 +25,7 @@ export function Hero() {
           width: "100%",
           height: "100%",
           objectFit: "cover",
-          objectPosition: "center 35%",
+          objectPosition: "center 65%",
         }}
       />
       {/* Racing-green gradient overlay keeps the headline legible over the photo */}
