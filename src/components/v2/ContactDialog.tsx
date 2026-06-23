@@ -15,27 +15,50 @@ const SCHEDULING_EMAIL = "schedule@flatsix.media";
 // Booking / contact dialog overlay.
 export function ContactDialog({ open, onClose }: ContactDialogProps) {
   const [sent, setSent] = React.useState(false);
+  const [sending, setSending] = React.useState(false);
+  const [error, setError] = React.useState("");
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [company, setCompany] = React.useState("");
   const [notes, setNotes] = React.useState("");
+  const [hp, setHp] = React.useState(""); // honeypot
   React.useEffect(() => {
     if (open) {
       setSent(false);
+      setSending(false);
+      setError("");
       setName("");
       setEmail("");
       setCompany("");
       setNotes("");
+      setHp("");
     }
   }, [open]);
 
-  const handleRequest = () => {
-    const subject = encodeURIComponent("Consultation Request for Flat Six Media");
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nNotes:\n${notes}\n\nI'd like to schedule a consultation.`
-    );
-    window.location.href = `mailto:${SCHEDULING_EMAIL}?subject=${subject}&body=${body}`;
-    setSent(true);
+  const handleRequest = async () => {
+    setError("");
+    if (!name.trim() || !email.trim()) {
+      setError("Please add your name and email.");
+      return;
+    }
+    setSending(true);
+    try {
+      const res = await fetch("/contact.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, company, notes, company_website: hp }),
+      });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.ok) {
+        setSent(true);
+      } else {
+        setError(data.error || "Something went wrong. Please email us directly.");
+      }
+    } catch {
+      setError("Network error. Please email us directly.");
+    } finally {
+      setSending(false);
+    }
   };
 
   if (!open) return null;
@@ -171,8 +194,30 @@ export function ContactDialog({ open, onClose }: ContactDialogProps) {
                   }}
                 />
               </div>
-              <Button variant="primary" fullWidth iconRight="arrow_forward" onClick={handleRequest}>
-                Request Consultation
+              {/* Honeypot — hidden from humans; bots that fill it are dropped */}
+              <input
+                type="text"
+                name="company_website"
+                tabIndex={-1}
+                autoComplete="off"
+                value={hp}
+                onChange={(e) => setHp(e.target.value)}
+                aria-hidden="true"
+                style={{ position: "absolute", left: "-9999px", width: 1, height: 1, opacity: 0 }}
+              />
+              {error && (
+                <p style={{ font: "var(--text-body-sm)", color: "var(--color-danger, #b3261e)", margin: 0 }}>
+                  {error}
+                </p>
+              )}
+              <Button
+                variant="primary"
+                fullWidth
+                iconRight={sending ? undefined : "arrow_forward"}
+                disabled={sending}
+                onClick={handleRequest}
+              >
+                {sending ? "Sending…" : "Request Consultation"}
               </Button>
               <p
                 style={{
