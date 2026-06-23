@@ -22,7 +22,16 @@ export function Footer() {
       >
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-            <span style={{ width: 22, height: 2, background: "var(--brass-300)" }} />
+            <img
+              src="/images/logo.png"
+              alt="Flat Six Media logo"
+              style={{
+                height: 30,
+                width: "auto",
+                // Logo art is black; invert to cream so it reads on the dark footer.
+                filter: "brightness(0) invert(1)",
+              }}
+            />
             <span
               style={{
                 fontFamily: "var(--font-display)",

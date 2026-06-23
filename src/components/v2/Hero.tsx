@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { Button } from "../ds/Button";
 
@@ -94,8 +96,15 @@ export function Hero() {
             High-performance strategy consulting for the modern media landscape. We bridge the gap
             between traditional value creation and the latest digital transformation.
           </p>
-          <Button variant="accent" size="lg" iconRight="arrow_forward">
-            View Our Expertise
+          <Button
+            variant="accent"
+            size="lg"
+            iconRight="arrow_forward"
+            onClick={() =>
+              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
+            }
+          >
+            View Our Services
           </Button>
         </div>
       </div>
