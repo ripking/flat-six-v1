@@ -28,18 +28,17 @@ jobs:
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: flatsix.media
+          # Direct origin server IP (the domain resolves to Hostinger's CDN,
+          # which doesn't pass FTP through). From hPanel → FTP Accounts.
+          server: 82.198.236.7
           port: 21
-          # Explicit FTP over TLS (secure). If a run fails with a TLS/cert
-          # error, change this to "ftp" (Hostinger also allows plain FTP on 21).
-          protocol: ftps
+          protocol: ftps # explicit FTP over TLS (verified working)
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
-          # Absolute path for the dedicated deploy FTP user. If a run fails with
-          # a "directory not found" error, the user is chrooted to public_html —
-          # change this to "./" instead.
-          server-dir: /home/u128742652/domains/flatsix.media/public_html/
+          # This FTP user is chrooted to public_html, so its login root IS the
+          # web directory — deploy straight to "./".
+          server-dir: ./
           # Action keeps a state file on the server so only changed files upload.
           exclude: |
             **/.git*
