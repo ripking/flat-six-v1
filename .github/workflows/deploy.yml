@@ -1,0 +1,46 @@
+name: Build and Deploy to Hostinger
+
+# Push to main → build the static site → upload to Hostinger over FTP.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch: {} # allows manual "Run workflow" from the Actions tab
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static export
+        run: npm run build # produces ./out
+
+      - name: Deploy to Hostinger via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.flatsix.media
+          port: 21
+          # Explicit FTP over TLS (secure). If a run fails with a TLS/cert
+          # error, change this to "ftp" (Hostinger also allows plain FTP on 21).
+          protocol: ftps
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/
+          # Absolute path for the dedicated deploy FTP user. If a run fails with
+          # a "directory not found" error, the user is chrooted to public_html —
+          # change this to "./" instead.
+          server-dir: /home/u128742652/domains/flatsix.media/public_html/
+          # Action keeps a state file on the server so only changed files upload.
+          exclude: |
+            **/.git*
+            **/.git*/**
