@@ -30,7 +30,7 @@ export function ContactDialog({ open, onClose }: ContactDialogProps) {
   }, [open]);
 
   const handleRequest = () => {
-    const subject = encodeURIComponent("Consultation Request — Flat Six Media");
+    const subject = encodeURIComponent("Consultation Request for Flat Six Media");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nCompany: ${company}\n\nNotes:\n${notes}\n\nI'd like to schedule a consultation.`
     );

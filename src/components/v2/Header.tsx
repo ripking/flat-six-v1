@@ -34,7 +34,7 @@ export function Header({ onContact }: HeaderProps) {
       >
         <a
           href="#top"
-          aria-label="Flat Six Media — back to top"
+          aria-label="Flat Six Media, back to top"
           style={{
             display: "flex",
             alignItems: "center",

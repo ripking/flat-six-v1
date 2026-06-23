@@ -37,8 +37,8 @@ export function Footer() {
             </span>
           </div>
           <p style={{ font: "var(--text-body-sm)", color: "var(--green-300)", margin: 0, maxWidth: 280 }}>
-            Boutique consultancy. Executive-caliber support across strategy, finance, and operations
-            — film, TV, streaming, games, sports, and live events.
+            Boutique consultancy providing executive-caliber support across strategy, finance, and
+            operations. We work across film, TV, streaming, games, sports, and live events.
           </p>
         </div>
         {cols.map(([title, items]) => (

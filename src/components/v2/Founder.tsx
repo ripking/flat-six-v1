@@ -54,7 +54,7 @@ export function Founder() {
           <p style={{ font: "var(--text-body)", color: "var(--color-text)", margin: "0 0 16px", maxWidth: 620 }}>
             His tenure included senior leadership within Columbia Pictures&apos; Business Development
             group, where he was instrumental in the financial modeling and greenlighting of major
-            franchises — including <em>Spider-Man: Into the Spider-Verse</em>, <em>Jumanji</em>, and{" "}
+            franchises, including <em>Spider-Man: Into the Spider-Verse</em>, <em>Jumanji</em>, and{" "}
             <em>Hotel Transylvania</em>.
           </p>
         </div>
