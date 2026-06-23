@@ -1,0 +1,27 @@
+/* Flat Six Media — Web fonts
+   NOTE: The live flatsix.media fonts could not be extracted (hotlink/CORS blocked).
+   These are deliberate, brand-appropriate substitutions on Google Fonts:
+     - Spectral        → editorial high-contrast serif for display ("Heritage")
+     - Hanken Grotesk  → clean, engineered grotesque for UI/body ("Innovation")
+     - IBM Plex Mono   → technical mono for stats, labels, data
+   Swap these for the brand's real faces when available.
+
+   NOTE: The actual Google Fonts (Spectral, Hanken Grotesk, IBM Plex Mono) and
+   Material Symbols Rounded are loaded via <link> tags in src/app/layout.tsx.
+   Tailwind v4 / Lightning CSS strips @import url() chains during the static
+   export build, so the stylesheets are linked in the document <head> instead. */
+
+.material-symbols-rounded {
+  font-family: 'Material Symbols Rounded';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}

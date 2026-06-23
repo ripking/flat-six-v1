@@ -1,0 +1,11 @@
+/* Flat Six Media — Design System entry point.
+   Aggregates the token files. NOTE: globals.css imports the individual token
+   files directly (a flat list) rather than this aggregator, because Tailwind v4
+   / Lightning CSS drops deeply-nested @import chains during the static export
+   build. This file is kept as the canonical reference / non-Tailwind consumers. */
+
+@import url("./tokens/fonts.css");
+@import url("./tokens/colors.css");
+@import url("./tokens/typography.css");
+@import url("./tokens/spacing.css");
+@import url("./tokens/elevation.css");

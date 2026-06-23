@@ -1,3 +1,12 @@
+/* Design-system fonts + tokens. Imported as a flat list here (Tailwind v4 /
+   Lightning CSS drops deeply-nested @import chains, so we reference the token
+   files directly rather than via design-system/styles.css). The Google Fonts +
+   Material Symbols Rounded @imports live in tokens/fonts.css. */
+@import "./design-system/tokens/fonts.css";
+@import "./design-system/tokens/colors.css";
+@import "./design-system/tokens/typography.css";
+@import "./design-system/tokens/spacing.css";
+@import "./design-system/tokens/elevation.css";
 @import "tailwindcss";
 
 :root {
