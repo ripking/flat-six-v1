@@ -22,7 +22,7 @@ export function Founder() {
       >
         <div>
           <img
-            src="/images/portrait2.jpg"
+            src="/images/founder.jpg"
             alt="Michael Rifkin"
             style={{
               width: "100%",
