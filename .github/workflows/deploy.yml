@@ -28,7 +28,7 @@ jobs:
       - name: Deploy to Hostinger via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ftp.flatsix.media
+          server: flatsix.media
           port: 21
           # Explicit FTP over TLS (secure). If a run fails with a TLS/cert
           # error, change this to "ftp" (Hostinger also allows plain FTP on 21).
