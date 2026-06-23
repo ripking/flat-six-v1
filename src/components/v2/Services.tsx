@@ -5,15 +5,15 @@ import { IconTile } from "../ds/IconTile";
 // Specialized Services — nine-up icon grid.
 export function Services() {
   const services: [string, string, string][] = [
-    ["insights", "Market Intelligence", "Deep-dive analytics into competitive landscapes and trend forecasting — before it hits the screen, or after release."],
+    ["insights", "Market Intelligence", "In-depth analytics on competitive landscapes and trend forecasting, whether before your project hits the screen or after it releases."],
     ["finance", "Fractional CFO / COO", "Fractional CFO and COO services for your content production company. Deeply experienced at studio and independent level."],
     ["balance", "Expert Witness", "Expert witness services for litigation support, arbitration, and mediation. Experienced at the federal level."],
     ["hub", "Franchise Development", "Experienced in franchise development and growth. Let's develop your next IP today."],
     ["account_balance", "Slate Financing", "Expert underwriting support to institutional investors for slate financing transactions."],
-    ["rocket_launch", "Greenlight Support", "Robust greenlight analysis for your film or TV show — investment support for financiers, or backend analysis."],
+    ["rocket_launch", "Greenlight Support", "Robust greenlight analysis for your film or TV show. We support financiers weighing an investment and provide backend analysis for projects already underway."],
     ["calculate", "Budgeting", "We work with experienced line producers that can create a budget for your indie or studio script."],
     ["business_center", "Business Planning", "Business plans, forecasts, and investor materials for your entertainment business."],
-    ["video_library", "Library Valuations", "Extensive experience valuing film and television libraries — determine your library's value and sell it."],
+    ["video_library", "Library Valuations", "Extensive experience valuing film and television libraries. We help you determine what your library is worth and sell it."],
   ];
   return (
     <section
