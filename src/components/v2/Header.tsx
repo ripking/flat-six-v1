@@ -42,7 +42,16 @@ export function Header({ onContact }: HeaderProps) {
             textDecoration: "none",
           }}
         >
-          <span style={{ width: 26, height: 2, background: "var(--brass-300)" }} />
+          <img
+            src="/images/logo.png"
+            alt="Flat Six Media logo"
+            style={{
+              height: 34,
+              width: "auto",
+              // Logo art is black; invert to cream so it reads on the dark header.
+              filter: "brightness(0) invert(1)",
+            }}
+          />
           <span
             style={{
               fontFamily: "var(--font-display)",
