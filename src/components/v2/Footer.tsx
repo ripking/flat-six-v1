@@ -19,6 +19,7 @@ export function Footer() {
           gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
           gap: 40,
         }}
+        className="fsm-grid-footer"
       >
         <div>
           <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>

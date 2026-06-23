@@ -32,7 +32,7 @@ export function Services() {
         >
           Specialized Services
         </h2>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
+        <div className="fsm-grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 28 }}>
           {services.map(([icon, title, body]) => (
             <div key={title} style={{ display: "flex", gap: 16 }}>
               <IconTile icon={icon} tone="brass" size={48} />

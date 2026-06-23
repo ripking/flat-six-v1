@@ -46,6 +46,7 @@ export function Hero() {
         }}
       />
       <div
+        className="fsm-hero-inner"
         style={{
           position: "relative",
           zIndex: 1,
@@ -70,6 +71,7 @@ export function Hero() {
             </span>
           </div>
           <h1
+            className="fsm-hero-h1"
             style={{
               fontFamily: "var(--font-display)",
               fontWeight: 500,

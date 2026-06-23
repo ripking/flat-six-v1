@@ -56,6 +56,7 @@ export function ContactDialog({ open, onClose }: ContactDialogProps) {
     >
       <div
         onClick={(e) => e.stopPropagation()}
+        className="fsm-dialog"
         style={{
           width: "100%",
           maxWidth: 480,

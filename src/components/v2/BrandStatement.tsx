@@ -16,6 +16,7 @@ export function BrandStatement() {
       style={{ background: "var(--color-surface-inverse)", padding: "var(--section-y) var(--gutter)" }}
     >
       <div
+        className="fsm-grid-split"
         style={{
           maxWidth: "var(--container-max)",
           margin: "0 auto",
@@ -51,6 +52,7 @@ export function BrandStatement() {
             sizes, major studios, institutional investors and financiers, family offices, and more.
           </p>
           <div
+            className="fsm-grid-stats"
             style={{
               display: "grid",
               gridTemplateColumns: "repeat(4, 1fr)",
@@ -68,6 +70,7 @@ export function BrandStatement() {
         <img
           src="/images/feature.jpg"
           alt="Flat-six engine detail"
+          className="fsm-feature-img"
           style={{
             width: "100%",
             height: 440,

@@ -53,6 +53,7 @@ export function Header({ onContact }: HeaderProps) {
             }}
           />
           <span
+            className="fsm-wordmark"
             style={{
               fontFamily: "var(--font-display)",
               fontWeight: 500,
@@ -66,24 +67,26 @@ export function Header({ onContact }: HeaderProps) {
           </span>
         </a>
         <nav style={{ display: "flex", alignItems: "center", gap: 30 }}>
-          {links.map((l) => (
-            <a
-              key={l}
-              href={"#" + l.toLowerCase()}
-              style={{
-                fontFamily: "var(--font-sans)",
-                fontSize: 14,
-                fontWeight: 500,
-                color: "var(--cream-200)",
-                textDecoration: "none",
-                letterSpacing: "0.01em",
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--brass-300)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream-200)")}
-            >
-              {l}
-            </a>
-          ))}
+          <div className="fsm-navlinks" style={{ display: "flex", alignItems: "center", gap: 30 }}>
+            {links.map((l) => (
+              <a
+                key={l}
+                href={"#" + l.toLowerCase()}
+                style={{
+                  fontFamily: "var(--font-sans)",
+                  fontSize: 14,
+                  fontWeight: 500,
+                  color: "var(--cream-200)",
+                  textDecoration: "none",
+                  letterSpacing: "0.01em",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "var(--brass-300)")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream-200)")}
+              >
+                {l}
+              </a>
+            ))}
+          </div>
           <Button variant="accent" size="sm" onClick={onContact}>
             Contact Us
           </Button>

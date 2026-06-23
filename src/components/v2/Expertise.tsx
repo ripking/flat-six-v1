@@ -43,6 +43,7 @@ export function Expertise() {
           Our Expertise
         </h2>
         <div
+          className="fsm-grid-3"
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(3, 1fr)",

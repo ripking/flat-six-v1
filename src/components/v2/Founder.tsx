@@ -11,6 +11,7 @@ export function Founder() {
       style={{ background: "var(--color-bg)", padding: "var(--section-y) var(--gutter)" }}
     >
       <div
+        className="fsm-grid-split"
         style={{
           maxWidth: "var(--container-max)",
           margin: "0 auto",
@@ -24,6 +25,7 @@ export function Founder() {
           <img
             src="/images/founder.jpg"
             alt="Michael Rifkin"
+            className="fsm-founder-img"
             style={{
               width: "100%",
               height: 420,
