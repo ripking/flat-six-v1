@@ -1,6 +1,7 @@
 name: Build and Deploy to Hostinger
 
-# Push to main → build the static site → upload to Hostinger over FTP.
+# Push to main → build the static site → rsync it to Hostinger over SSH.
+# (Hostinger blocks FTP from cloud/CI IP ranges, so we deploy via SSH/rsync.)
 on:
   push:
     branches: [main]
@@ -25,21 +26,15 @@ jobs:
       - name: Build static export
         run: npm run build # produces ./out
 
-      - name: Deploy to Hostinger via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Deploy to Hostinger via SSH (rsync)
+        uses: easingthemes/ssh-deploy@v5.1.0
         with:
-          # Direct origin server IP (the domain resolves to Hostinger's CDN,
-          # which doesn't pass FTP through). From hPanel → FTP Accounts.
-          server: 82.198.236.7
-          port: 21
-          protocol: ftps # explicit FTP over TLS (verified working)
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./out/
-          # This FTP user is chrooted to public_html, so its login root IS the
-          # web directory — deploy straight to "./".
-          server-dir: ./
-          # Action keeps a state file on the server so only changed files upload.
-          exclude: |
-            **/.git*
-            **/.git*/**
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: 82.198.236.7
+          REMOTE_PORT: 65002
+          REMOTE_USER: u128742652
+          SOURCE: out/ # trailing slash → copy the *contents* of out/
+          TARGET: /home/u128742652/domains/flatsix.media/public_html
+          # Mirror the build output; --delete prunes stale files (e.g. old
+          # hashed _next chunks). public_html holds only generated files.
+          ARGS: "-rltgoDzvO --delete"
