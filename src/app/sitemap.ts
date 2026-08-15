@@ -7,5 +7,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://flatsix.media/",
     },
+    {
+      url: "https://flatsix.media/services/",
+    },
   ];
 }

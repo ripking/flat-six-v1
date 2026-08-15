@@ -12,25 +12,25 @@ export function Footer({ onContact }: FooterProps) {
     [
       "Expertise",
       [
-        ["Content Strategy", "#expertise-content-strategy"],
-        ["Finance & Operations", "#expertise-finance-operations"],
-        ["Scalable Support", "#expertise-scalable-support"],
+        ["Content Strategy", "/#expertise-content-strategy"],
+        ["Finance & Operations", "/#expertise-finance-operations"],
+        ["Scalable Support", "/#expertise-scalable-support"],
       ],
     ],
     [
       "Services",
       [
-        ["Slate Financing", "#service-slate-financing"],
-        ["Greenlight Support", "#service-greenlight-support"],
-        ["Library Valuations", "#service-library-valuations"],
-        ["Expert Witness", "#service-expert-witness"],
+        ["Slate Financing", "/services/#slate-financing"],
+        ["Greenlight Support", "/services/#greenlight-analysis"],
+        ["Library Valuations", "/services/#library-valuation"],
+        ["Expert Witness", "/services/#expert-witness"],
       ],
     ],
     [
       "Company",
       [
-        ["About", "#about"],
-        ["Founder", "#founder"],
+        ["About", "/#about"],
+        ["Founder", "/#founder"],
         ["Contact", "#contact"],
       ],
     ],

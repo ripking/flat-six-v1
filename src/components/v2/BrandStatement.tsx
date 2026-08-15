@@ -7,7 +7,7 @@ export function BrandStatement() {
   const stats: [string, string][] = [
     ["$500M+", "Slate Funding Secured"],
     ["20+", "Years Experience"],
-    ["8", "Franchises Created"],
+    ["4", "Franchises Created"],
     ["24/7", "Advisory Support"],
   ];
   return (

@@ -46,12 +46,25 @@
   .fsm-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
+/* Keep service-family descriptions and link lists on a shared baseline. */
+@media (min-width: 769px) {
+  .fsm-service-family-card h3 { min-height: 58px; }
+  .fsm-service-family-description { min-height: 88px; }
+}
+
 @media (max-width: 768px) {
   /* Hide desktop nav links; the Contact button stays */
   .fsm-navlinks { display: none !important; }
   /* Two-column text/image splits stack */
   .fsm-grid-split { grid-template-columns: 1fr !important; }
   .fsm-grid-footer { grid-template-columns: 1fr 1fr !important; }
+  .fsm-featured-service { grid-template-columns: 1fr !important; }
+  .fsm-featured-service > div:last-child {
+    border-left: 0 !important;
+    border-top: 1px solid var(--color-divider);
+    padding-left: 0 !important;
+    padding-top: 24px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -67,4 +80,6 @@
   .fsm-feature-img, .fsm-founder-img { height: 280px !important; }
   .fsm-dialog { padding: 24px !important; }
   .fsm-wordmark { font-size: 15px !important; letter-spacing: 0.1em !important; }
+  .fsm-services-hero h1 { font-size: clamp(38px, 11vw, 52px) !important; }
+  .fsm-grid-services-2 { grid-template-columns: 1fr !important; }
 }
