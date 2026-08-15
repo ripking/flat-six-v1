@@ -84,7 +84,7 @@ const featuredServices = [
     icon: "account_balance",
     title: "Slate Financing & Underwriting",
     description:
-      "Independent analytical support for institutional investors, financiers, and family offices evaluating multi-title film and television opportunities.",
+      "Independent analytical support for institutional investors, financiers, and family offices evaluating unique slate investment opportunities.",
     details: [
       "Slate and company-level underwriting",
       "Institutional-grade slate modeling",
