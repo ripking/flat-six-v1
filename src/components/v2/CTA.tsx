@@ -31,7 +31,7 @@ export function CTA({ onBook }: CTAProps) {
         >
           Ready to transform your
           <br />
-          media strategy?
+          media business?
         </h2>
         <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: "0 auto 34px", maxWidth: 540 }}>
           Join the ranks of the world&apos;s most innovative media brands and studios. Let&apos;s
