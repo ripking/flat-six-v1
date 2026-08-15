@@ -52,22 +52,31 @@ const serviceFamilies = [
 
 const featuredServices = [
   {
-    id: "greenlight-analysis",
-    label: "Investment Decision Support",
-    icon: "rocket_launch",
-    title: "Film & TV Greenlight Analysis",
-    description:
-      "Evaluate the creative, financial, market, and commercial considerations behind a film or television investment—before capital is committed or while a project is already underway.",
-    details: ["Title and comparable analysis", "Financial and market review", "Decision-ready recommendations"],
-  },
-  {
     id: "fractional-cfo-coo",
     label: "Embedded Executive Support",
     icon: "finance",
     title: "Fractional CFO / COO Services",
     description:
       "Executive-level financial and operational leadership for content production companies, available on retainer or for periods of growth, transition, or complexity.",
-    details: ["Forecasting and financial reporting", "Operational planning and controls", "Flexible retained leadership"],
+    details: [
+      "Forecasting and financial department management",
+      "Strategy and operations planning and controls",
+      "Resource planning",
+      "Flexible retained leadership",
+    ],
+  },
+  {
+    id: "greenlight-analysis",
+    label: "Investment Decision Support",
+    icon: "rocket_launch",
+    title: "Film & TV Greenlight Analysis",
+    description:
+      "Ad-hoc and on-retainer greenlight support for feature films, television, and streaming content. We work with you before capital is committed or to reassess a project in production.",
+    details: [
+      "Title and comparable analysis",
+      "Co-financing and backend scenario analysis",
+      "Decision-ready recommendations",
+    ],
   },
   {
     id: "slate-financing",
@@ -76,7 +85,12 @@ const featuredServices = [
     title: "Slate Financing & Underwriting",
     description:
       "Independent analytical support for institutional investors, financiers, and family offices evaluating multi-title film and television opportunities.",
-    details: ["Slate-level underwriting", "Scenario and sensitivity analysis", "Investor-facing decision support"],
+    details: [
+      "Slate and company-level underwriting",
+      "Institutional-grade slate modeling",
+      "Scenario and sensitivity analysis",
+      "Investor-facing decision support",
+    ],
   },
 ];
 
@@ -339,7 +353,7 @@ export function ServicesOverview() {
               Focused analysis for high-stakes decisions.
             </h2>
             <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
-              {featuredServices.map((service, index) => (
+              {featuredServices.map((service) => (
                 <article
                   key={service.id}
                   id={service.id}
@@ -349,23 +363,23 @@ export function ServicesOverview() {
                     gridTemplateColumns: "0.9fr 1.4fr 0.9fr",
                     gap: 36,
                     alignItems: "center",
-                    background: index === 1 ? "var(--green-900)" : "var(--color-surface)",
-                    color: index === 1 ? "var(--cream-50)" : "var(--color-text)",
-                    border: index === 1 ? "1px solid var(--green-700)" : "1px solid var(--color-border)",
+                    background: service.id === "fractional-cfo-coo" ? "var(--green-900)" : "var(--color-surface)",
+                    color: service.id === "fractional-cfo-coo" ? "var(--cream-50)" : "var(--color-text)",
+                    border: service.id === "fractional-cfo-coo" ? "1px solid var(--green-700)" : "1px solid var(--color-border)",
                     borderRadius: "var(--radius-lg)",
                     padding: "var(--space-10)",
                     scrollMarginTop: 96,
                   }}
                 >
                   <div>
-                    <IconTile icon={service.icon} tone={index === 1 ? "brass" : "green"} size={60} />
+                    <IconTile icon={service.icon} tone={service.id === "fractional-cfo-coo" ? "brass" : "green"} size={60} />
                     <div
                       style={{
                         fontFamily: "var(--font-mono)",
                         fontSize: 11,
                         letterSpacing: "0.12em",
                         textTransform: "uppercase",
-                        color: index === 1 ? "var(--brass-300)" : "var(--brass-700)",
+                        color: service.id === "fractional-cfo-coo" ? "var(--brass-300)" : "var(--brass-700)",
                         marginTop: 18,
                       }}
                     >
@@ -379,14 +393,14 @@ export function ServicesOverview() {
                     <p
                       style={{
                         font: "var(--text-body)",
-                        color: index === 1 ? "var(--cream-200)" : "var(--color-text-muted)",
+                        color: service.id === "fractional-cfo-coo" ? "var(--cream-200)" : "var(--color-text-muted)",
                         margin: 0,
                       }}
                     >
                       {service.description}
                     </p>
                   </div>
-                  <div style={{ borderLeft: `1px solid ${index === 1 ? "var(--green-700)" : "var(--color-divider)"}`, paddingLeft: 28 }}>
+                  <div style={{ borderLeft: `1px solid ${service.id === "fractional-cfo-coo" ? "var(--green-700)" : "var(--color-divider)"}`, paddingLeft: 28 }}>
                     {service.details.map((detail) => (
                       <div key={detail} style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12 }}>
                         <span
@@ -406,7 +420,7 @@ export function ServicesOverview() {
                         background: "none",
                         border: 0,
                         padding: "8px 0 0",
-                        color: index === 1 ? "var(--brass-300)" : "var(--color-text-brand)",
+                        color: service.id === "fractional-cfo-coo" ? "var(--brass-300)" : "var(--color-text-brand)",
                         font: "var(--text-body-sm)",
                         fontWeight: 700,
                         cursor: "pointer",
