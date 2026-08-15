@@ -42,7 +42,7 @@ const serviceFamilies = [
     description:
       "Bring senior entertainment-industry experience and clear financial analysis to complex disputes and special situations.",
     links: [
-      ["Entertainment Expert Witness", "#expert-witness"],
+      ["Entertainment Industry Expert Witness", "#expert-witness"],
       ["Participations Analysis", "#participations-analysis"],
       ["Living Trust Participation Valuation", "#living-trust-participation-valuation"],
       ["Legal & Agency Client Support", "#legal-agency-support"],
@@ -96,7 +96,7 @@ const supportingServices = [
   {
     id: "expert-witness",
     icon: "balance",
-    title: "Entertainment Expert Witness",
+    title: "Entertainment Industry Expert Witness",
     description: "Entertainment-industry analysis for litigation support, arbitration, and mediation, including federal matters.",
   },
   {
