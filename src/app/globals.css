@@ -46,6 +46,11 @@
   .fsm-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
+/* Keep service-family descriptions and link lists on a shared baseline. */
+@media (min-width: 769px) {
+  .fsm-service-family-card h3 { min-height: 58px; }
+}
+
 @media (max-width: 768px) {
   /* Hide desktop nav links; the Contact button stays */
   .fsm-navlinks { display: none !important; }

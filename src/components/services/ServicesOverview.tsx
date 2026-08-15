@@ -26,7 +26,7 @@ const serviceFamilies = [
   },
   {
     number: "02",
-    title: "Finance & Operations",
+    title: "Finance & Operations Support",
     description:
       "Build a stronger financial and operational foundation, and add experienced leadership where it matters most.",
     links: [
@@ -263,9 +263,15 @@ export function ServicesOverview() {
                 draws from more than one discipline.
               </p>
             </div>
-            <div className="fsm-grid-3" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+            <div className="fsm-grid-3 fsm-service-family-grid" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
               {serviceFamilies.map((family) => (
-                <Card key={family.number} tone="paper" padding="var(--space-10)" style={{ height: "100%" }}>
+                <Card
+                  key={family.number}
+                  className="fsm-service-family-card"
+                  tone="paper"
+                  padding="var(--space-10)"
+                  style={{ height: "100%" }}
+                >
                   <span
                     style={{
                       fontFamily: "var(--font-mono)",
