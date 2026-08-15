@@ -283,7 +283,10 @@ export function ServicesOverview() {
                     {family.number}
                   </span>
                   <h3 style={{ font: "var(--text-h3)", margin: "18px 0 12px" }}>{family.title}</h3>
-                  <p style={{ font: "var(--text-body-sm)", color: "var(--color-text-muted)", margin: "0 0 26px" }}>
+                  <p
+                    className="fsm-service-family-description"
+                    style={{ font: "var(--text-body-sm)", color: "var(--color-text-muted)", margin: "0 0 26px" }}
+                  >
                     {family.description}
                   </p>
                   <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>

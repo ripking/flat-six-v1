@@ -49,6 +49,7 @@
 /* Keep service-family descriptions and link lists on a shared baseline. */
 @media (min-width: 769px) {
   .fsm-service-family-card h3 { min-height: 58px; }
+  .fsm-service-family-description { min-height: 88px; }
 }
 
 @media (max-width: 768px) {
