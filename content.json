@@ -29,9 +29,15 @@
   "founder": {
     "subheading": "Founder & Principal",
     "name": "Michael Rifkin",
+    "image": "/images/founder.jpg",
+    "imageAlt": "Michael Rifkin, founder and principal of Flat Six Media",
     "quote": "",
-    "paragraph1": "Michael is a seasoned media executive with nearly two decades of experience at the intersection of finance, strategy, and global distribution. Before founding Flat Six Media, Michael served as the Co-Head of Sony Pictures International Productions, where he oversaw finance and operations for a slate of 30+ films annually. His tenure at Sony also included senior leadership roles within Columbia Pictures’ Business Development group, where he was instrumental in the financial modeling and greenlighting of major franchises, including Spider-Man: Into the Spider-Verse, Jumanji, and Hotel Transylvania.",
-    "paragraph2": "Through Flat Six Media, Michael leverages his deep expertise in film ultimates and slate valuation to support a diverse range of clients, from independent production companies and institutional investors to major video game studios expanding into film. Whether acting as a fractional CFO for indie producers or providing underwriting support for multi-year co-financing deals, Michael provides the quantitative rigor and qualitative insight necessary to navigate the complexities of modern entertainment investment. A recognized industry expert, he has contributed to foundational texts on business valuation and frequently guest lectures at the USC Marshall School of Business on the mechanics of the studio system."
+    "paragraphs": [
+      "Michael is a seasoned media executive with nearly two decades of experience at the intersection of finance, strategy, and global distribution. Before founding Flat Six Media, he served as Co-Head of Sony Pictures International Productions, overseeing finance and operations for a slate of 30+ films annually.",
+      "His tenure included senior leadership within Columbia Pictures’ Business Development group, where he was instrumental in the financial modeling and greenlighting of major franchises, including Spider-Man: Into the Spider-Verse, Jumanji, and Hotel Transylvania.",
+      "After leaving Sony Pictures, Michael founded Flat Six Media, a boutique consultancy focused on providing premium support to content businesses. The firm offers retained and ad hoc greenlight support for independent and studio feature films, fractional CFO and strategy work, and underwriting support for slate and production-company financing transactions. Michael’s experience in feature films has also led to repeat engagements with the United States government as an expert witness.",
+      "Flat Six Media has extensive experience supporting clients across the entertainment industry. We work with each client to customize a solution that works for their business."
+    ]
   },
   "footer_cta": {
     "heading": "Ready to transform your media strategy?",

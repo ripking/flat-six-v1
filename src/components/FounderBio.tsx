@@ -10,9 +10,9 @@ export default function FounderBio() {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           
           <div className="w-full lg:w-5/12 aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl relative group border-4 border-background-light/10">
-            <Image 
-              src={content.images.portrait} 
-              alt="Julian Sterling, Founder &amp; Principal" 
+            <Image
+              src={content.founder.image}
+              alt={content.founder.imageAlt}
               fill
               className="object-cover grayscale contrast-125 transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105" 
             />
@@ -29,12 +29,9 @@ export default function FounderBio() {
                   {content.founder.quote}
                 </p>
               )}
-              <p>
-                {content.founder.paragraph1}
-              </p>
-              <p>
-                {content.founder.paragraph2}
-              </p>
+              {content.founder.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
             </div>
 
             <div className="mt-12 flex gap-4">
