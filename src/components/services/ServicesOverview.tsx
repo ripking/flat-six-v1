@@ -225,7 +225,7 @@ export function ServicesOverview() {
               style={{
                 fontFamily: "var(--font-display)",
                 fontWeight: 500,
-                fontSize: "clamp(48px, 6vw, 78px)",
+                fontSize: "clamp(46px, 5.5vw, 72px)",
                 lineHeight: 1.04,
                 letterSpacing: "var(--tracking-tight)",
                 color: "var(--cream-50)",
