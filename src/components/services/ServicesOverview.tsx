@@ -13,11 +13,12 @@ import { StatBlock } from "@/components/ds/StatBlock";
 const serviceFamilies = [
   {
     number: "01",
-    title: "Content Strategy & Valuation",
+    title: "Content Strategy, Valuation & Capital",
     description:
-      "Make better creative and investment decisions with disciplined market, financial, and portfolio analysis.",
+      "Make better creative and capital allocation decisions with disciplined market, financial, and portfolio analysis.",
     links: [
       ["Greenlight Analysis", "#greenlight-analysis"],
+      ["Slate Financing & Underwriting", "#slate-financing"],
       ["Market Intelligence", "#market-intelligence"],
       ["Library Valuation", "#library-valuation"],
       ["Franchise Development", "#franchise-development"],
@@ -27,10 +28,10 @@ const serviceFamilies = [
     number: "02",
     title: "Finance & Operations",
     description:
-      "Build a stronger financial foundation, evaluate capital opportunities, and add experienced leadership where it matters most.",
+      "Build a stronger financial and operational foundation, and add experienced leadership where it matters most.",
     links: [
-      ["Slate Financing & Underwriting", "#slate-financing"],
       ["Fractional CFO / COO", "#fractional-cfo-coo"],
+      ["Bonded Financial Close Support", "#bonded-financial-close"],
       ["Budgeting", "#budgeting"],
       ["Business Planning", "#business-planning"],
     ],
@@ -40,7 +41,11 @@ const serviceFamilies = [
     title: "Litigation & Specialized Advisory",
     description:
       "Bring senior entertainment-industry experience and clear financial analysis to complex disputes and special situations.",
-    links: [["Entertainment Expert Witness", "#expert-witness"]],
+    links: [
+      ["Entertainment Expert Witness", "#expert-witness"],
+      ["Participations Analysis", "#participations-analysis"],
+      ["Legal & Agency Client Support", "#legal-agency-support"],
+    ],
   },
 ];
 
@@ -110,6 +115,24 @@ const supportingServices = [
     icon: "business_center",
     title: "Business Planning",
     description: "Business plans, financial forecasts, and investor materials for entertainment and content businesses.",
+  },
+  {
+    id: "bonded-financial-close",
+    icon: "fact_check",
+    title: "Bonded Financial Close Support",
+    description: "Financial close support for bonded productions, including reconciliation, organization, and required reporting.",
+  },
+  {
+    id: "participations-analysis",
+    icon: "percent",
+    title: "Participations Analysis",
+    description: "Analysis of participation statements, backend definitions, and payment scenarios for rights holders and stakeholders.",
+  },
+  {
+    id: "legal-agency-support",
+    icon: "support_agent",
+    title: "Legal & Agency Client Support",
+    description: "Financial and strategic support for client business ventures, backend scenarios, and related entertainment matters.",
   },
 ];
 
@@ -190,21 +213,28 @@ export function ServicesOverview() {
                 margin: "20px 0 28px",
               }}
             >
-              Finance, Strategy & Operations for Modern Media
+              Finance, Strategy & Operations Advisory for Modern Media
             </h1>
-            <p
+            <div
               style={{
                 font: "var(--text-body)",
                 fontSize: 19,
                 color: "var(--cream-200)",
-                maxWidth: 760,
+                maxWidth: 820,
                 margin: "0 0 38px",
               }}
             >
-              Flat Six Media provides executive-caliber advisory support to studios, production
-              companies, independent producers, financiers, investors, streamers, influencers, and
-              creators. Engagements are available on retainer or for individual projects.
-            </p>
+              <p style={{ margin: "0 0 16px" }}>
+                Flat Six Media brings executive-caliber, applied experience to the entertainment and
+                media landscape—where other advisory services often fall short by lacking real-world
+                operating experience inside modern media businesses.
+              </p>
+              <p style={{ margin: "0 0 16px" }}>
+                Our services support studios, production companies, independent producers,
+                financiers, legal counsel, streamers, influencers, and creators.
+              </p>
+              <p style={{ margin: 0 }}>Engagements are available on retainer or for individual projects.</p>
+            </div>
             <Button variant="accent" size="lg" iconRight="arrow_forward" onClick={openContact}>
               Discuss Your Needs
             </Button>
@@ -228,7 +258,7 @@ export function ServicesOverview() {
                 Start with the decision in front of you.
               </h2>
               <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: 0, maxWidth: 620 }}>
-                Our work spans content, capital, operations, and specialized advisory. These three
+                Our work spans content & capital, operations, and specialized advisory. These three
                 service families provide a practical starting point—even when the final engagement
                 draws from more than one discipline.
               </p>
