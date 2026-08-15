@@ -44,7 +44,6 @@ const serviceFamilies = [
     links: [
       ["Entertainment Industry Expert Witness", "#expert-witness"],
       ["Participations Analysis", "#participations-analysis"],
-      ["Living Trust Participation Valuation", "#living-trust-participation-valuation"],
       ["Legal & Agency Client Support", "#legal-agency-support"],
     ],
   },
@@ -99,19 +98,25 @@ const supportingServices = [
     id: "market-intelligence",
     icon: "insights",
     title: "Market Intelligence",
-    description: "Competitive landscape analysis and trend forecasting before or after a project reaches the screen.",
+    description: [
+      "Comprehensive competitive market analysis and trend forecasting before or after a project reaches the screen.",
+      "Unique Datasets across box office, pre-sales, social media, streaming, and more.",
+    ],
   },
   {
     id: "library-valuation",
     icon: "video_library",
     title: "Film & TV Library Valuation",
-    description: "Financial and strategic valuation support for film and television libraries in financing, acquisition, portfolio management, or sale contexts.",
+    description: [
+      "Financial and sales brokerage support for film and television libraries.",
+      "Supporting all aspects, including: financing, acquisition, portfolio management, and sales.",
+    ],
   },
   {
     id: "expert-witness",
     icon: "balance",
     title: "Entertainment Industry Expert Witness",
-    description: "Entertainment-industry analysis for litigation support, arbitration, and mediation, including federal matters.",
+    description: "Expert witness support for federal and state criminal and civil cases.",
   },
   {
     id: "franchise-development",
@@ -123,7 +128,7 @@ const supportingServices = [
     id: "budgeting",
     icon: "calculate",
     title: "Budgeting",
-    description: "Production budgeting support through experienced line producers for independent and studio scripts.",
+    description: "Production budgeting and schedule support through our network of experienced line producers. Capable of handling film, TV, and streaming shows with any size production budget in any location.",
   },
   {
     id: "business-planning",
@@ -135,7 +140,7 @@ const supportingServices = [
     id: "bonded-financial-close",
     icon: "fact_check",
     title: "Bonded Financial Close Support",
-    description: "Financial close support for bonded productions, including reconciliation, organization, and required reporting.",
+    description: "Financial close support for bonded productions, including budgeting, finance plans, cash flow schedules, bond organization, and all required reporting.",
   },
   {
     id: "participations-analysis",
@@ -148,12 +153,6 @@ const supportingServices = [
     icon: "support_agent",
     title: "Legal & Agency Client Support",
     description: "Financial and strategic support for client business ventures, backend scenarios, and related entertainment matters.",
-  },
-  {
-    id: "living-trust-participation-valuation",
-    icon: "assured_workload",
-    title: "Living Trust Participation Valuation",
-    description: "Valuation support for entertainment participation interests held by living trusts, including cash-flow and scenario analysis.",
   },
 ];
 
@@ -453,9 +452,24 @@ export function ServicesOverview() {
                 >
                   <IconTile icon={service.icon} tone="brass" size={48} />
                   <h3 style={{ font: "var(--text-h3)", fontSize: 20, margin: "20px 0 10px" }}>{service.title}</h3>
-                  <p style={{ font: "var(--text-body-sm)", color: "var(--color-text-muted)", margin: 0 }}>
-                    {service.description}
-                  </p>
+                  {Array.isArray(service.description) ? (
+                    service.description.map((paragraph, paragraphIndex) => (
+                      <p
+                        key={paragraph}
+                        style={{
+                          font: "var(--text-body-sm)",
+                          color: "var(--color-text-muted)",
+                          margin: paragraphIndex === 0 ? "0 0 14px" : 0,
+                        }}
+                      >
+                        {paragraph}
+                      </p>
+                    ))
+                  ) : (
+                    <p style={{ font: "var(--text-body-sm)", color: "var(--color-text-muted)", margin: 0 }}>
+                      {service.description}
+                    </p>
+                  )}
                 </Card>
               ))}
             </div>
