@@ -61,6 +61,15 @@ const featuredServices = [
     details: ["Title and comparable analysis", "Financial and market review", "Decision-ready recommendations"],
   },
   {
+    id: "fractional-cfo-coo",
+    label: "Embedded Executive Support",
+    icon: "finance",
+    title: "Fractional CFO / COO Services",
+    description:
+      "Executive-level financial and operational leadership for content production companies, available on retainer or for periods of growth, transition, or complexity.",
+    details: ["Forecasting and financial reporting", "Operational planning and controls", "Flexible retained leadership"],
+  },
+  {
     id: "slate-financing",
     label: "Capital & Underwriting",
     icon: "account_balance",
@@ -68,15 +77,6 @@ const featuredServices = [
     description:
       "Independent analytical support for institutional investors, financiers, and family offices evaluating multi-title film and television opportunities.",
     details: ["Slate-level underwriting", "Scenario and sensitivity analysis", "Investor-facing decision support"],
-  },
-  {
-    id: "library-valuation",
-    label: "Portfolio Value",
-    icon: "video_library",
-    title: "Film & TV Library Valuation",
-    description:
-      "Assess the financial and strategic value of film and television libraries for financing, acquisition, portfolio management, or sale.",
-    details: ["Cash-flow and rights review", "Market and comparable analysis", "Transaction and sale support"],
   },
 ];
 
@@ -88,10 +88,10 @@ const supportingServices = [
     description: "Competitive landscape analysis and trend forecasting before or after a project reaches the screen.",
   },
   {
-    id: "fractional-cfo-coo",
-    icon: "finance",
-    title: "Fractional CFO / COO",
-    description: "Executive-level financial and operational support for content production companies on a flexible basis.",
+    id: "library-valuation",
+    icon: "video_library",
+    title: "Film & TV Library Valuation",
+    description: "Financial and strategic valuation support for film and television libraries in financing, acquisition, portfolio management, or sale contexts.",
   },
   {
     id: "expert-witness",
