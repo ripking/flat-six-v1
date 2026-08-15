@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Button } from "../ds/Button";
 
 type HeaderProps = {
@@ -10,7 +11,12 @@ type HeaderProps = {
 // Site header — wordmark, nav, contact CTA.
 export function Header({ onContact }: HeaderProps) {
   const [scrolled] = React.useState(false);
-  const links = ["Expertise", "Services", "About", "Founder"];
+  const links = [
+    ["Expertise", "/#expertise"],
+    ["Services", "/services/"],
+    ["About", "/#about"],
+    ["Founder", "/#founder"],
+  ];
   return (
     <header
       style={{
@@ -32,9 +38,9 @@ export function Header({ onContact }: HeaderProps) {
           justifyContent: "space-between",
         }}
       >
-        <a
-          href="#top"
-          aria-label="Flat Six Media, back to top"
+        <Link
+          href="/"
+          aria-label="Flat Six Media, home"
           style={{
             display: "flex",
             alignItems: "center",
@@ -65,13 +71,13 @@ export function Header({ onContact }: HeaderProps) {
           >
             Flat Six Media
           </span>
-        </a>
+        </Link>
         <nav style={{ display: "flex", alignItems: "center", gap: 30 }}>
           <div className="fsm-navlinks" style={{ display: "flex", alignItems: "center", gap: 30 }}>
-            {links.map((l) => (
-              <a
-                key={l}
-                href={"#" + l.toLowerCase()}
+            {links.map(([label, href]) => (
+              <Link
+                key={label}
+                href={href}
                 style={{
                   fontFamily: "var(--font-sans)",
                   fontSize: 14,
@@ -83,8 +89,8 @@ export function Header({ onContact }: HeaderProps) {
                 onMouseEnter={(e) => (e.currentTarget.style.color = "var(--brass-300)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream-200)")}
               >
-                {l}
-              </a>
+                {label}
+              </Link>
             ))}
           </div>
           <Button variant="accent" size="sm" onClick={onContact}>
