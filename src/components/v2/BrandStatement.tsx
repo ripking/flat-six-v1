@@ -68,8 +68,8 @@ export function BrandStatement() {
           </div>
         </div>
         <img
-          src="/images/feature.jpg"
-          alt="Flat-six engine detail"
+          src="/images/about-film-set-behind-camera.png"
+          alt="Smoky film set viewed from behind the camera with motion-blurred crew figures"
           className="fsm-feature-img"
           style={{
             width: "100%",
