@@ -7,16 +7,19 @@ import { SectionLabel } from "../ds/SectionLabel";
 export function Expertise() {
   const pillars = [
     {
+      id: "expertise-content-strategy",
       icon: "strategy",
       title: "Content Strategy",
       body: "20+ years evaluating thousands of films and TV shows for studio and independent financing. Available for individual titles, libraries, and slates.",
     },
     {
+      id: "expertise-finance-operations",
       icon: "leaderboard",
       title: "Finance & Operations",
       body: "15 years of executive-level experience managing multinational organizations, with a proven record of growing top-line revenue and expanding into new territories.",
     },
     {
+      id: "expertise-scalable-support",
       icon: "handshake",
       title: "Scalable Support",
       body: "Long-term partnerships or one-off strategic projects to suit your needs. We'll work with you, at whatever scale the engagement calls for.",
@@ -51,7 +54,14 @@ export function Expertise() {
           }}
         >
           {pillars.map((p) => (
-            <Card key={p.title} tone="paper" interactive padding="var(--space-10)">
+            <Card
+              key={p.title}
+              id={p.id}
+              tone="paper"
+              interactive
+              padding="var(--space-10)"
+              style={{ scrollMarginTop: 100 }}
+            >
               <IconTile icon={p.icon} tone="green" size={60} />
               <h3 style={{ font: "var(--text-h3)", margin: "22px 0 12px", color: "var(--color-text)" }}>
                 {p.title}
