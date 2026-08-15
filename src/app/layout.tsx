@@ -2,8 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Flat Six Media",
-  description: "Executive Caliber. On Demand.",
+  metadataBase: new URL("https://flatsix.media"),
+  title: "Flat Six Media | Film & TV Strategy, Finance & Operations",
+  description:
+    "Strategic finance and operations support for studios, producers, financiers, and investors across film, television, YouTube, and streaming.",
+  alternates: {
+    canonical: "/",
+  },
 };
 
 export default function RootLayout({

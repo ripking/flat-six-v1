@@ -3,11 +3,37 @@
 import React from "react";
 
 // Footer.
-export function Footer() {
-  const cols: [string, string[]][] = [
-    ["Expertise", ["Content Strategy", "Finance & Operations", "Scalable Support"]],
-    ["Services", ["Slate Financing", "Greenlight Support", "Library Valuations", "Expert Witness"]],
-    ["Company", ["About", "Founder", "Contact"]],
+type FooterProps = {
+  onContact?: () => void;
+};
+
+export function Footer({ onContact }: FooterProps) {
+  const cols: [string, [string, string][]][] = [
+    [
+      "Expertise",
+      [
+        ["Content Strategy", "#expertise-content-strategy"],
+        ["Finance & Operations", "#expertise-finance-operations"],
+        ["Scalable Support", "#expertise-scalable-support"],
+      ],
+    ],
+    [
+      "Services",
+      [
+        ["Slate Financing", "#service-slate-financing"],
+        ["Greenlight Support", "#service-greenlight-support"],
+        ["Library Valuations", "#service-library-valuations"],
+        ["Expert Witness", "#service-expert-witness"],
+      ],
+    ],
+    [
+      "Company",
+      [
+        ["About", "#about"],
+        ["Founder", "#founder"],
+        ["Contact", "#contact"],
+      ],
+    ],
   ];
   return (
     <footer style={{ background: "var(--green-950)", padding: "64px var(--gutter) 40px" }}>
@@ -66,17 +92,39 @@ export function Footer() {
               {title}
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              {items.map((i) => (
-                <a
-                  key={i}
-                  href="#"
-                  style={{ font: "var(--text-body-sm)", color: "var(--cream-200)", textDecoration: "none" }}
-                  onMouseEnter={(e) => (e.currentTarget.style.color = "var(--cream-50)")}
-                  onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream-200)")}
-                >
-                  {i}
-                </a>
-              ))}
+              {items.map(([label, href]) =>
+                label === "Contact" ? (
+                  <button
+                    key={label}
+                    type="button"
+                    onClick={onContact}
+                    style={{
+                      appearance: "none",
+                      background: "none",
+                      border: 0,
+                      padding: 0,
+                      font: "var(--text-body-sm)",
+                      color: "var(--cream-200)",
+                      textAlign: "left",
+                      cursor: "pointer",
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--cream-50)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream-200)")}
+                  >
+                    {label}
+                  </button>
+                ) : (
+                  <a
+                    key={label}
+                    href={href}
+                    style={{ font: "var(--text-body-sm)", color: "var(--cream-200)", textDecoration: "none" }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = "var(--cream-50)")}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream-200)")}
+                  >
+                    {label}
+                  </a>
+                ),
+              )}
             </div>
           </div>
         ))}

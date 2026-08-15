@@ -25,7 +25,7 @@ export default function Home() {
       <BrandStatement />
       <Founder />
       <CTA onBook={openContact} />
-      <Footer />
+      <Footer onContact={openContact} />
       <ContactDialog open={contactOpen} onClose={closeContact} />
     </div>
   );
