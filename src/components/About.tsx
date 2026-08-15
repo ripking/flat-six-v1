@@ -27,7 +27,7 @@ export default function About() {
         <div className="flex-1 w-full aspect-square relative rounded-2xl overflow-hidden shadow-xl border border-primary/10">
           <Image 
             src={content.images.feature} 
-            alt="Feature image"
+            alt={content.images.featureAlt}
             fill
             className="w-full h-full object-cover rounded-xl shadow-lg border border-primary/10"
           />
