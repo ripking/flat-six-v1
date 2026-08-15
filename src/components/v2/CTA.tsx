@@ -34,8 +34,7 @@ export function CTA({ onBook }: CTAProps) {
           media business?
         </h2>
         <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: "0 auto 34px", maxWidth: 540 }}>
-          Join the ranks of the world&apos;s most innovative media brands and studios. Let&apos;s
-          build your future narrative today.
+          Schedule a consultation and let&apos;s discuss how we can solve your needs.
         </p>
         <Button variant="primary" size="lg" iconRight="arrow_forward" onClick={onBook}>
           Book a Consultation
