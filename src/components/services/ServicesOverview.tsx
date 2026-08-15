@@ -44,6 +44,7 @@ const serviceFamilies = [
     links: [
       ["Entertainment Expert Witness", "#expert-witness"],
       ["Participations Analysis", "#participations-analysis"],
+      ["Living Trust Participation Valuation", "#living-trust-participation-valuation"],
       ["Legal & Agency Client Support", "#legal-agency-support"],
     ],
   },
@@ -133,6 +134,12 @@ const supportingServices = [
     icon: "support_agent",
     title: "Legal & Agency Client Support",
     description: "Financial and strategic support for client business ventures, backend scenarios, and related entertainment matters.",
+  },
+  {
+    id: "living-trust-participation-valuation",
+    icon: "assured_workload",
+    title: "Living Trust Participation Valuation",
+    description: "Valuation support for entertainment participation interests held by living trusts, including cash-flow and scenario analysis.",
   },
 ];
 
