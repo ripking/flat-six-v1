@@ -95,8 +95,9 @@ export function Hero() {
               margin: "0 0 36px",
             }}
           >
-            High-performance strategy consulting for the modern media landscape. We bridge the gap
-            between traditional value creation and the latest digital transformation.
+            High-performance finance, strategy, and operations consulting for the modern media
+            landscape. Custom on-retainer and ad-hoc solutions for studios, production companies,
+            independent producers, streamers, influencers, and creators.
           </p>
           <Button
             variant="accent"
