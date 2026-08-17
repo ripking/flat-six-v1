@@ -7,19 +7,37 @@ import { Input } from "../ds/Input";
 type ContactDialogProps = {
   open: boolean;
   onClose: () => void;
+  initialService?: string;
 };
 
 // Email that consultation requests are routed to.
 const SCHEDULING_EMAIL = "schedule@flatsix.media";
 
+const SERVICE_OPTIONS = [
+  "Fractional CFO / COO Services",
+  "Film & TV Greenlight Analysis",
+  "Slate Financing & Underwriting",
+  "Market Intelligence",
+  "Film & TV Library Valuation",
+  "Entertainment Industry Expert Witness",
+  "Franchise Development",
+  "Budgeting",
+  "Business Planning",
+  "Bonded Financial Close Support",
+  "Participations Analysis",
+  "Legal & Agency Client Support",
+  "Other",
+];
+
 // Booking / contact dialog overlay.
-export function ContactDialog({ open, onClose }: ContactDialogProps) {
+export function ContactDialog({ open, onClose, initialService = "" }: ContactDialogProps) {
   const [sent, setSent] = React.useState(false);
   const [sending, setSending] = React.useState(false);
   const [error, setError] = React.useState("");
   const [name, setName] = React.useState("");
   const [email, setEmail] = React.useState("");
   const [company, setCompany] = React.useState("");
+  const [service, setService] = React.useState("");
   const [notes, setNotes] = React.useState("");
   const [hp, setHp] = React.useState(""); // honeypot
   React.useEffect(() => {
@@ -30,15 +48,16 @@ export function ContactDialog({ open, onClose }: ContactDialogProps) {
       setName("");
       setEmail("");
       setCompany("");
+      setService(initialService);
       setNotes("");
       setHp("");
     }
-  }, [open]);
+  }, [open, initialService]);
 
   const handleRequest = async () => {
     setError("");
-    if (!name.trim() || !email.trim()) {
-      setError("Please add your name and email.");
+    if (!name.trim() || !email.trim() || !service) {
+      setError("Please add your name, email, and area of interest.");
       return;
     }
     setSending(true);
@@ -46,7 +65,7 @@ export function ContactDialog({ open, onClose }: ContactDialogProps) {
       const res = await fetch("/contact.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, company, notes, company_website: hp }),
+        body: JSON.stringify({ name, email, company, service, notes, company_website: hp }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok && data.ok) {
@@ -119,10 +138,10 @@ export function ContactDialog({ open, onClose }: ContactDialogProps) {
                     marginBottom: 6,
                   }}
                 >
-                  Book a Consultation
+                  Request a Consultation
                 </div>
                 <h3 style={{ font: "var(--text-h2)", fontSize: "var(--text-xl)", margin: 0, color: "var(--color-text)" }}>
-                  Let&apos;s build your future narrative.
+                  Tell us what decision you&apos;re facing.
                 </h3>
               </div>
               <button
@@ -153,6 +172,46 @@ export function ContactDialog({ open, onClose }: ContactDialogProps) {
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
               />
+              <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+                <label
+                  htmlFor="fld-service"
+                  style={{
+                    fontFamily: "var(--font-mono)",
+                    fontSize: "var(--text-2xs)",
+                    fontWeight: 500,
+                    letterSpacing: "var(--tracking-wide)",
+                    textTransform: "uppercase",
+                    color: "var(--color-text-muted)",
+                  }}
+                >
+                  I&apos;m Interested In
+                </label>
+                <select
+                  id="fld-service"
+                  value={service}
+                  required
+                  onChange={(e) => setService(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "12px 14px",
+                    background: "var(--color-surface)",
+                    border: "var(--border-medium) solid var(--color-border)",
+                    borderRadius: "var(--radius-md)",
+                    fontFamily: "var(--font-sans)",
+                    fontSize: "var(--text-base)",
+                    color: service ? "var(--color-text)" : "var(--color-text-muted)",
+                  }}
+                >
+                  <option value="" disabled>
+                    Select an area of interest
+                  </option>
+                  {SERVICE_OPTIONS.map((option) => (
+                    <option key={option} value={option}>
+                      {option}
+                    </option>
+                  ))}
+                </select>
+              </div>
               <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
                 <label
                   htmlFor="fld-notes"

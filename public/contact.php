@@ -1,6 +1,6 @@
 <?php
 // Flat Six Media — consultation form handler.
-// Receives a JSON POST from the booking dialog and emails the submission.
+// Receives a JSON POST from the consultation dialog and emails the submission.
 
 header('Content-Type: application/json');
 
@@ -30,6 +30,7 @@ function clean($v) {
 $name    = clean($data['name'] ?? '');
 $email   = clean($data['email'] ?? '');
 $company = clean($data['company'] ?? '');
+$service = clean($data['service'] ?? '');
 $notes   = trim((string) ($data['notes'] ?? ''));        // notes can keep line breaks
 $notes   = str_replace(["\r\n", "\r"], "\n", $notes);
 $hp      = clean($data['company_website'] ?? '');         // honeypot (should be empty)
@@ -41,18 +42,19 @@ if ($hp !== '') {
 }
 
 // --- Validate ---
-if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $service === '') {
     http_response_code(422);
-    echo json_encode(['ok' => false, 'error' => 'Please provide your name and a valid email.']);
+    echo json_encode(['ok' => false, 'error' => 'Please provide your name, a valid email, and an area of interest.']);
     exit;
 }
 
 // --- Compose ---
-$subject = 'Consultation Request for Flat Six Media';
+$subject = 'Consultation Request: ' . $service;
 $body    = "New consultation request from flatsix.media\n\n"
          . "Name:    {$name}\n"
          . "Email:   {$email}\n"
-         . "Company: " . ($company !== '' ? $company : '—') . "\n\n"
+         . "Company: " . ($company !== '' ? $company : '—') . "\n"
+         . "Service: {$service}\n\n"
          . "Notes:\n" . ($notes !== '' ? $notes : '—') . "\n";
 
 $headers  = "From: {$FROM}\r\n";
