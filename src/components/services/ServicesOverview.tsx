@@ -192,7 +192,15 @@ const audiences = [
 
 export function ServicesOverview() {
   const [contactOpen, setContactOpen] = React.useState(false);
-  const openContact = () => setContactOpen(true);
+  const [initialService, setInitialService] = React.useState("");
+  const openContact = () => {
+    setInitialService("");
+    setContactOpen(true);
+  };
+  const openServiceContact = (service: string) => {
+    setInitialService(service);
+    setContactOpen(true);
+  };
   const closeContact = () => setContactOpen(false);
 
   return (
@@ -414,7 +422,7 @@ export function ServicesOverview() {
                     ))}
                     <button
                       type="button"
-                      onClick={openContact}
+                      onClick={() => openServiceContact(service.title)}
                       style={{
                         background: "none",
                         border: 0,
@@ -605,7 +613,7 @@ export function ServicesOverview() {
         </section>
       </main>
       <Footer onContact={openContact} />
-      <ContactDialog open={contactOpen} onClose={closeContact} />
+      <ContactDialog open={contactOpen} onClose={closeContact} initialService={initialService} />
     </div>
   );
 }

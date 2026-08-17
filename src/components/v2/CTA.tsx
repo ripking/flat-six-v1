@@ -38,7 +38,7 @@ export function CTA({ onBook }: CTAProps) {
           build your future narrative today.
         </p>
         <Button variant="primary" size="lg" iconRight="arrow_forward" onClick={onBook}>
-          Book a Consultation
+          Request a Consultation
         </Button>
       </div>
     </section>
