@@ -5,6 +5,7 @@ import { Header } from "@/components/v2/Header";
 import { Hero } from "@/components/v2/Hero";
 import { Expertise } from "@/components/v2/Expertise";
 import { Services } from "@/components/v2/Services";
+import { AIAutomation } from "@/components/v2/AIAutomation";
 import { BrandStatement } from "@/components/v2/BrandStatement";
 import { Founder } from "@/components/v2/Founder";
 import { CTA } from "@/components/v2/CTA";
@@ -22,6 +23,7 @@ export default function Home() {
       <Hero />
       <Expertise />
       <Services />
+      <AIAutomation />
       <BrandStatement />
       <Founder />
       <CTA onBook={openContact} />

@@ -44,6 +44,10 @@
 /* Tablet: 3-up grids become 2-up */
 @media (max-width: 960px) {
   .fsm-grid-3 { grid-template-columns: repeat(2, 1fr) !important; }
+  /* AI capability strip: 4-up becomes 2-up before the split stacks */
+  .fsm-grid-ai-4 { grid-template-columns: repeat(2, 1fr) !important; }
+  /* Five footer columns are too tight below the wide breakpoint */
+  .fsm-grid-footer { grid-template-columns: 1fr 1fr 1fr !important; }
 }
 
 /* Keep service-family descriptions and link lists on a shared baseline. */
@@ -70,6 +74,7 @@
 @media (max-width: 600px) {
   :root { --gutter: 18px; --section-y: 64px; }
   .fsm-grid-3 { grid-template-columns: 1fr !important; }
+  .fsm-grid-ai-4 { grid-template-columns: 1fr !important; }
   .fsm-grid-stats { grid-template-columns: repeat(2, 1fr) !important; }
   .fsm-grid-footer { grid-template-columns: 1fr !important; }
   .fsm-hero-inner {

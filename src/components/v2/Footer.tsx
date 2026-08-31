@@ -27,6 +27,15 @@ export function Footer({ onContact }: FooterProps) {
       ],
     ],
     [
+      "AI & Automation",
+      [
+        ["Workflow Automation", "/ai/#workflow-automation"],
+        ["Data Infrastructure", "/ai/#data-infrastructure"],
+        ["Applied Analysis", "/ai/#applied-analysis"],
+        ["AI Readiness", "/ai/#ai-readiness"],
+      ],
+    ],
+    [
       "Company",
       [
         ["About", "/#about"],
@@ -42,7 +51,7 @@ export function Footer({ onContact }: FooterProps) {
           maxWidth: "var(--container-max)",
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1.4fr 1fr 1fr 1fr 1fr",
           gap: 40,
         }}
         className="fsm-grid-footer"
