@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { AISolutions } from "@/components/ai/AISolutions";
 
 export const metadata: Metadata = {
-  title: "AI & Automation for Entertainment & Content Businesses | Flat Six Media",
+  title: "AI Services for Media Businesses | Flat Six Media",
   description:
-    "AI automation, workflow, data, and analysis solutions built for studios, production companies, distributors, streamers, and creators—grounded in real media finance and operations experience.",
+    "Practical AI for studios, production companies, financiers, and distributors. AI opportunity assessments, workflow design and implementation, and managed AI operations—built on real media operating experience.",
   alternates: {
     canonical: "/ai/",
   },

@@ -32,12 +32,12 @@ const SERVICE_GROUPS: [string, string[]][] = [
     ],
   ],
   [
-    "AI & Automation",
+    "AI Services",
     [
-      "Workflow Automation",
-      "Data Infrastructure",
-      "Applied Analysis & Modeling",
-      "AI Readiness Assessment",
+      "AI Opportunity Review",
+      "AI Opportunity Assessment",
+      "AI Workflow Design & Implementation",
+      "Managed AI Operations",
     ],
   ],
   ["Other", ["Other"]],

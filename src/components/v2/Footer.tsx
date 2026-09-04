@@ -27,12 +27,12 @@ export function Footer({ onContact }: FooterProps) {
       ],
     ],
     [
-      "AI & Automation",
+      "AI Services",
       [
-        ["Workflow Automation", "/ai/#workflow-automation"],
-        ["Data Infrastructure", "/ai/#data-infrastructure"],
-        ["Applied Analysis", "/ai/#applied-analysis"],
-        ["AI Readiness", "/ai/#ai-readiness"],
+        ["AI Opportunity Assessment", "/ai/#ai-opportunity-assessment"],
+        ["Design & Implementation", "/ai/#ai-workflow-implementation"],
+        ["Managed AI Operations", "/ai/#managed-ai-operations"],
+        ["Trust & Controls", "/ai/#trust"],
       ],
     ],
     [
