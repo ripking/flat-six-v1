@@ -14,6 +14,7 @@ export function Header({ onContact }: HeaderProps) {
   const links = [
     ["Expertise", "/#expertise"],
     ["Services", "/services/"],
+    ["AI Services", "/ai/"],
     ["About", "/#about"],
     ["Founder", "/#founder"],
   ];

@@ -27,6 +27,15 @@ export function Footer({ onContact }: FooterProps) {
       ],
     ],
     [
+      "AI Services",
+      [
+        ["AI Opportunity Assessment", "/ai/#ai-opportunity-assessment"],
+        ["Design & Implementation", "/ai/#ai-workflow-implementation"],
+        ["Managed AI Operations", "/ai/#managed-ai-operations"],
+        ["Trust & Controls", "/ai/#trust"],
+      ],
+    ],
+    [
       "Company",
       [
         ["About", "/#about"],
@@ -42,7 +51,7 @@ export function Footer({ onContact }: FooterProps) {
           maxWidth: "var(--container-max)",
           margin: "0 auto",
           display: "grid",
-          gridTemplateColumns: "1.4fr 1fr 1fr 1fr",
+          gridTemplateColumns: "1.4fr 1fr 1fr 1fr 1fr",
           gap: 40,
         }}
         className="fsm-grid-footer"

@@ -13,20 +13,34 @@ type ContactDialogProps = {
 // Email that consultation requests are routed to.
 const SCHEDULING_EMAIL = "schedule@flatsix.media";
 
-const SERVICE_OPTIONS = [
-  "Fractional CFO / COO Services",
-  "Film & TV Greenlight Analysis",
-  "Slate Financing & Underwriting",
-  "Market Intelligence",
-  "Film & TV Library Valuation",
-  "Entertainment Industry Expert Witness",
-  "Franchise Development",
-  "Budgeting",
-  "Business Planning",
-  "Bonded Financial Close Support",
-  "Participations Analysis",
-  "Legal & Agency Client Support",
-  "Other",
+const SERVICE_GROUPS: [string, string[]][] = [
+  [
+    "Advisory Services",
+    [
+      "Fractional CFO / COO Services",
+      "Film & TV Greenlight Analysis",
+      "Slate Financing & Underwriting",
+      "Market Intelligence",
+      "Film & TV Library Valuation",
+      "Entertainment Industry Expert Witness",
+      "Franchise Development",
+      "Budgeting",
+      "Business Planning",
+      "Bonded Financial Close Support",
+      "Participations Analysis",
+      "Legal & Agency Client Support",
+    ],
+  ],
+  [
+    "AI Services",
+    [
+      "AI Opportunity Review",
+      "AI Opportunity Assessment",
+      "AI Workflow Design & Implementation",
+      "Managed AI Operations",
+    ],
+  ],
+  ["Other", ["Other"]],
 ];
 
 // Booking / contact dialog overlay.
@@ -205,10 +219,14 @@ export function ContactDialog({ open, onClose, initialService = "" }: ContactDia
                   <option value="" disabled>
                     Select an area of interest
                   </option>
-                  {SERVICE_OPTIONS.map((option) => (
-                    <option key={option} value={option}>
-                      {option}
-                    </option>
+                  {SERVICE_GROUPS.map(([group, options]) => (
+                    <optgroup key={group} label={group}>
+                      {options.map((option) => (
+                        <option key={option} value={option}>
+                          {option}
+                        </option>
+                      ))}
+                    </optgroup>
                   ))}
                 </select>
               </div>
