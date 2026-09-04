@@ -84,9 +84,6 @@ const serviceLadder = [
       "Security and access reviews",
       "Regular executive reporting",
     ],
-    deliverableLabel: "Positioning",
-    deliverable:
-      "Clients receive a managed capability rather than another piece of software they must learn, maintain, and troubleshoot themselves.",
     cta: "Discuss Ongoing Support",
     contactValue: "Managed AI Operations",
   },
