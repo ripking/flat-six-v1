@@ -3,17 +3,19 @@ import Link from "next/link";
 import { SectionLabel } from "../ds/SectionLabel";
 import { IconTile } from "../ds/IconTile";
 
-// Specialized Services — nine-up icon grid.
+// Specialized Services icon grid.
 export function Services() {
   const services: [string, string, string, string][] = [
     ["service-market-intelligence", "insights", "Market Intelligence", "In-depth analytics on competitive landscapes and trend forecasting, whether before your project hits the screen or after it releases."],
     ["service-fractional-cfo-coo", "finance", "Fractional CFO / COO", "Fractional CFO and COO services for your content production company. Deeply experienced at studio and independent level."],
     ["service-expert-witness", "balance", "Expert Witness", "Expert witness services for litigation support, arbitration, and mediation. Experienced at the federal level."],
+    ["service-forensic-auditing", "manage_search", "Forensic Auditing", "Forensic financial reviews for film and television productions, including investigations into suspected wrongdoing, theft, and other financial irregularities."],
     ["service-franchise-development", "hub", "Franchise Development", "Experienced in franchise development and growth. Let's develop your next IP today."],
     ["service-slate-financing", "account_balance", "Slate Financing", "Expert underwriting support to institutional investors for slate financing transactions."],
     ["service-greenlight-support", "rocket_launch", "Greenlight Support", "Robust greenlight analysis for your film or TV show. We support financiers weighing an investment and provide backend analysis for projects already underway."],
     ["service-budgeting", "calculate", "Budgeting", "We work with experienced line producers that can create a budget for your indie or studio script."],
     ["service-business-planning", "business_center", "Business Planning", "Business plans, forecasts, and investor materials for your entertainment business."],
+    ["service-compliance-support", "policy", "Compliance Support", "Reporting and covenant compliance support for credit facilities financing production, P&A, distribution, and ongoing operations."],
     ["service-library-valuations", "video_library", "Library Valuations", "Extensive experience valuing film and television libraries. We help you determine what your library is worth and sell it."],
   ];
   return (

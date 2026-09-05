@@ -27,6 +27,8 @@ const SERVICE_GROUPS: [string, string[]][] = [
       "Budgeting",
       "Business Planning",
       "Bonded Financial Close Support",
+      "Compliance Support",
+      "Forensic Auditing",
       "Participations Analysis",
       "Legal & Agency Client Support",
     ],

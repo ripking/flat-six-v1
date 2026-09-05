@@ -32,6 +32,7 @@ const serviceFamilies = [
     links: [
       ["Fractional CFO / COO", "#fractional-cfo-coo"],
       ["Bonded Financial Close Support", "#bonded-financial-close"],
+      ["Compliance Support", "#compliance-support"],
       ["Budgeting", "#budgeting"],
       ["Business Planning", "#business-planning"],
     ],
@@ -43,6 +44,7 @@ const serviceFamilies = [
       "Bring senior entertainment-industry experience and clear financial analysis to complex disputes and special situations.",
     links: [
       ["Entertainment Industry Expert Witness", "#expert-witness"],
+      ["Forensic Auditing", "#forensic-auditing"],
       ["Participations Analysis", "#participations-analysis"],
       ["Legal & Agency Client Support", "#legal-agency-support"],
     ],
@@ -141,6 +143,18 @@ const supportingServices = [
     icon: "fact_check",
     title: "Bonded Financial Close Support",
     description: "Financial close support for bonded productions, including budgeting, finance plans, cash flow schedules, bond organization, and all required reporting.",
+  },
+  {
+    id: "compliance-support",
+    icon: "policy",
+    title: "Compliance Support",
+    description: "Reporting and covenant compliance support for credit facilities financing production, P&A, distribution, and ongoing operations.",
+  },
+  {
+    id: "forensic-auditing",
+    icon: "manage_search",
+    title: "Forensic Auditing",
+    description: "Forensic financial reviews for film and television productions, including investigations into suspected wrongdoing, theft, and other financial irregularities.",
   },
   {
     id: "participations-analysis",
