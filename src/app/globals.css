@@ -49,9 +49,10 @@
    and tighten spacing on small screens.
    ───────────────────────────────────────────────────────────────────────── */
 
-/* Never allow horizontal overflow on small screens */
+/* Use clip (not hidden) on html only — overflow: hidden on body creates a
+   new containing block that breaks position: sticky. */
 @media (max-width: 768px) {
-  html, body { overflow-x: hidden; }
+  html { overflow-x: clip; }
 }
 
 /* Tablet: 3-up grids become 2-up */
@@ -133,8 +134,11 @@
     margin-bottom: 10px !important;
   }
 
-  /* Feature & founder images */
-  .fsm-feature-img, .fsm-founder-img { height: 260px !important; }
+  /* Feature & founder images — taller on mobile so faces aren't cropped out */
+  .fsm-feature-img, .fsm-founder-img {
+    height: 340px !important;
+    object-position: center 20% !important;
+  }
 
   /* Dialogs */
   .fsm-dialog { padding: 24px !important; }
