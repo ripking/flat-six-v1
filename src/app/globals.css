@@ -31,6 +31,19 @@
 }
 
 /* ─────────────────────────────────────────────────────────────────────────
+   Hamburger / mobile nav
+   ───────────────────────────────────────────────────────────────────────── */
+
+/* Show hamburger, hide desktop nav links at the mobile breakpoint */
+@media (max-width: 768px) {
+  .fsm-hamburger { display: flex !important; }
+  .fsm-navlinks { display: none !important; }
+}
+
+/* Mobile menu open state */
+.fsm-mobile-menu--open { display: flex !important; }
+
+/* ─────────────────────────────────────────────────────────────────────────
    Responsive / mobile. Section layouts use inline styles (which beat CSS),
    so these breakpoint overrides use !important to collapse multi-column grids
    and tighten spacing on small screens.
@@ -59,35 +72,76 @@
 }
 
 @media (max-width: 768px) {
-  /* Hide desktop nav links; the Contact button stays */
-  .fsm-navlinks { display: none !important; }
   /* Two-column text/image splits stack */
-  .fsm-grid-split { grid-template-columns: 1fr !important; }
+  .fsm-grid-split { grid-template-columns: 1fr !important; gap: 36px !important; }
   .fsm-grid-footer { grid-template-columns: 1fr 1fr !important; }
-  .fsm-featured-service { grid-template-columns: 1fr !important; }
+  .fsm-featured-service { grid-template-columns: 1fr !important; gap: 24px !important; }
   .fsm-featured-service > div:last-child {
     border-left: 0 !important;
     border-top: 1px solid var(--color-divider);
     padding-left: 0 !important;
     padding-top: 24px;
   }
+  /* Tighter hero inner padding */
+  .fsm-hero-inner {
+    padding-top: 96px !important;
+    padding-bottom: 72px !important;
+  }
+  .fsm-services-hero h1 {
+    font-size: clamp(36px, 9vw, 48px) !important;
+    margin-bottom: 20px !important;
+  }
 }
 
 @media (max-width: 600px) {
-  :root { --gutter: 18px; --section-y: 64px; }
-  .fsm-grid-3 { grid-template-columns: 1fr !important; }
-  .fsm-grid-ai-3 { grid-template-columns: 1fr !important; }
-  .fsm-grid-process { grid-template-columns: 1fr !important; }
-  .fsm-grid-stats { grid-template-columns: repeat(2, 1fr) !important; }
-  .fsm-grid-footer { grid-template-columns: 1fr !important; }
-  .fsm-hero-inner {
-    padding-top: 104px !important;
-    padding-bottom: 76px !important;
+  :root {
+    --gutter: 18px;
+    --section-y: 64px;
   }
-  .fsm-hero-h1 { font-size: clamp(34px, 9vw, 46px) !important; }
-  .fsm-feature-img, .fsm-founder-img { height: 280px !important; }
+  .fsm-grid-3 { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .fsm-grid-ai-3 { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .fsm-grid-process { grid-template-columns: 1fr !important; gap: 16px !important; }
+  .fsm-grid-stats { grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; }
+  .fsm-grid-footer { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .fsm-grid-split { gap: 28px !important; }
+  .fsm-grid-services-2 { grid-template-columns: 1fr !important; gap: 14px !important; }
+
+  /* Hero — tighter spacing and type */
+  .fsm-hero-inner {
+    padding-top: 88px !important;
+    padding-bottom: 64px !important;
+  }
+  .fsm-hero-h1 {
+    font-size: clamp(32px, 9vw, 42px) !important;
+    margin-bottom: 18px !important;
+  }
+  .fsm-hero-h1 + p { font-size: 16px !important; }
+
+  /* Page hero headings (services, AI) */
+  .fsm-services-hero h1 {
+    font-size: clamp(32px, 9vw, 44px) !important;
+    margin-bottom: 16px !important;
+  }
+
+  /* Featured service cards — tighter on phones */
+  .fsm-featured-service {
+    padding: 24px !important;
+    gap: 18px !important;
+  }
+  .fsm-featured-service h3 {
+    font-size: clamp(22px, 7vw, 28px) !important;
+    margin-bottom: 10px !important;
+  }
+
+  /* Feature & founder images */
+  .fsm-feature-img, .fsm-founder-img { height: 260px !important; }
+
+  /* Dialogs */
   .fsm-dialog { padding: 24px !important; }
+
+  /* Header wordmark */
   .fsm-wordmark { font-size: 15px !important; letter-spacing: 0.1em !important; }
-  .fsm-services-hero h1 { font-size: clamp(38px, 11vw, 52px) !important; }
-  .fsm-grid-services-2 { grid-template-columns: 1fr !important; }
+
+  /* Mobile menu fine-tuning */
+  .fsm-mobile-menu { top: 62px; }
 }
