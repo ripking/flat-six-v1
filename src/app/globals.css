@@ -141,7 +141,4 @@
 
   /* Header wordmark */
   .fsm-wordmark { font-size: 15px !important; letter-spacing: 0.1em !important; }
-
-  /* Mobile menu fine-tuning */
-  .fsm-mobile-menu { top: 62px; }
 }
