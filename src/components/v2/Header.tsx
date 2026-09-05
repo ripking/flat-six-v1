@@ -128,20 +128,25 @@ export function Header({ onContact }: HeaderProps) {
         </nav>
       </div>
 
-      {/* Mobile menu overlay */}
+      {/* Mobile menu overlay — fills viewport below the sticky header */}
       <div
         className={`fsm-mobile-menu${mobileOpen ? " fsm-mobile-menu--open" : ""}`}
         aria-hidden={!mobileOpen}
         style={{
           display: "none",
           position: "fixed",
-          inset: 0,
-          top: 66,
+          top: 0,
+          left: 0,
+          right: 0,
+          height: "100dvh",
           zIndex: 49,
           background: "rgba(14,42,32,0.98)",
           backdropFilter: "blur(14px)",
           flexDirection: "column",
-          padding: "28px var(--gutter) 40px",
+          paddingTop: 94,
+          paddingLeft: "var(--gutter)",
+          paddingRight: "var(--gutter)",
+          paddingBottom: 40,
           gap: 6,
           overflowY: "auto",
         }}
