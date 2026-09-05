@@ -8,23 +8,36 @@ type HeaderProps = {
   onContact?: () => void;
 };
 
-// Site header — wordmark, nav, contact CTA.
+const navLinks: [string, string][] = [
+  ["Expertise", "/#expertise"],
+  ["Services", "/services/"],
+  ["AI Services", "/ai/"],
+  ["About", "/#about"],
+  ["Founder", "/#founder"],
+];
+
+// Site header — wordmark, nav, contact CTA, mobile hamburger menu.
 export function Header({ onContact }: HeaderProps) {
-  const [scrolled] = React.useState(false);
-  const links = [
-    ["Expertise", "/#expertise"],
-    ["Services", "/services/"],
-    ["AI Services", "/ai/"],
-    ["About", "/#about"],
-    ["Founder", "/#founder"],
-  ];
+  const [mobileOpen, setMobileOpen] = React.useState(false);
+  const toggleMobile = () => setMobileOpen((v) => !v);
+  const closeMobile = () => setMobileOpen(false);
+
+  const linkStyle: React.CSSProperties = {
+    fontFamily: "var(--font-sans)",
+    fontSize: 14,
+    fontWeight: 500,
+    color: "var(--cream-200)",
+    textDecoration: "none",
+    letterSpacing: "0.01em",
+  };
+
   return (
     <header
       style={{
         position: "sticky",
         top: 0,
         zIndex: 50,
-        background: scrolled ? "rgba(14,42,32,0.94)" : "rgba(14,42,32,0.82)",
+        background: "rgba(14,42,32,0.94)",
         backdropFilter: "blur(10px)",
         borderBottom: "1px solid rgba(155,191,172,0.18)",
       }}
@@ -55,7 +68,6 @@ export function Header({ onContact }: HeaderProps) {
             style={{
               height: 34,
               width: "auto",
-              // Logo art is black; invert to cream so it reads on the dark header.
               filter: "brightness(0) invert(1)",
             }}
           />
@@ -73,20 +85,15 @@ export function Header({ onContact }: HeaderProps) {
             Flat Six Media
           </span>
         </Link>
+
+        {/* Desktop nav */}
         <nav style={{ display: "flex", alignItems: "center", gap: 30 }}>
           <div className="fsm-navlinks" style={{ display: "flex", alignItems: "center", gap: 30 }}>
-            {links.map(([label, href]) => (
+            {navLinks.map(([label, href]) => (
               <Link
                 key={label}
                 href={href}
-                style={{
-                  fontFamily: "var(--font-sans)",
-                  fontSize: 14,
-                  fontWeight: 500,
-                  color: "var(--cream-200)",
-                  textDecoration: "none",
-                  letterSpacing: "0.01em",
-                }}
+                style={linkStyle}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "var(--brass-300)")}
                 onMouseLeave={(e) => (e.currentTarget.style.color = "var(--cream-200)")}
               >
@@ -97,7 +104,76 @@ export function Header({ onContact }: HeaderProps) {
           <Button variant="accent" size="sm" onClick={onContact}>
             Contact Us
           </Button>
+          {/* Hamburger — visible only on mobile */}
+          <button
+            type="button"
+            className="fsm-hamburger"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            onClick={toggleMobile}
+            style={{
+              display: "none",
+              appearance: "none",
+              background: "none",
+              border: 0,
+              padding: 4,
+              cursor: "pointer",
+              color: "var(--cream-50)",
+            }}
+          >
+            <span className="material-symbols-rounded" style={{ fontSize: 28 }}>
+              {mobileOpen ? "close" : "menu"}
+            </span>
+          </button>
         </nav>
+      </div>
+
+      {/* Mobile menu overlay */}
+      <div
+        className={`fsm-mobile-menu${mobileOpen ? " fsm-mobile-menu--open" : ""}`}
+        aria-hidden={!mobileOpen}
+        style={{
+          display: "none",
+          position: "fixed",
+          inset: 0,
+          top: 66,
+          zIndex: 49,
+          background: "rgba(14,42,32,0.98)",
+          backdropFilter: "blur(14px)",
+          flexDirection: "column",
+          padding: "28px var(--gutter) 40px",
+          gap: 6,
+          overflowY: "auto",
+        }}
+      >
+        {navLinks.map(([label, href]) => (
+          <Link
+            key={label}
+            href={href}
+            onClick={closeMobile}
+            style={{
+              ...linkStyle,
+              fontSize: 18,
+              padding: "14px 0",
+              borderBottom: "1px solid rgba(155,191,172,0.12)",
+            }}
+          >
+            {label}
+          </Link>
+        ))}
+        <div style={{ paddingTop: 20 }}>
+          <Button
+            variant="accent"
+            size="lg"
+            fullWidth
+            onClick={() => {
+              closeMobile();
+              onContact?.();
+            }}
+          >
+            Contact Us
+          </Button>
+        </div>
       </div>
     </header>
   );
