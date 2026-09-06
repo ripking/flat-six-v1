@@ -19,9 +19,10 @@ export function CTA({ onBook }: CTAProps) {
     >
       <div style={{ maxWidth: 760, margin: "0 auto" }}>
         <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
-          <SectionLabel align="center">Let&apos;s Talk</SectionLabel>
+          <SectionLabel align="center">Start the Conversation</SectionLabel>
         </div>
         <h2
+          className="fsm-display-heading"
           style={{
             font: "var(--text-h1)",
             letterSpacing: "var(--tracking-tight)",
@@ -29,17 +30,23 @@ export function CTA({ onBook }: CTAProps) {
             margin: "0 0 18px",
           }}
         >
-          Ready to transform your
-          <br />
-          media business?
+          What decision is in front of you?
         </h2>
         <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: "0 auto 34px", maxWidth: 540 }}>
-          Join the ranks of the world&apos;s most innovative media brands and studios. Let&apos;s
-          build your future narrative today.
+          Tell us what is at stake, where the uncertainty lies, and what decision needs to be made.
+          We will determine whether Flat Six Media is the right fit and what level of support the
+          situation requires.
         </p>
         <Button variant="primary" size="lg" iconRight="arrow_forward" onClick={onBook}>
-          Request a Consultation
+          Start a Confidential Conversation
         </Button>
+        <p style={{ font: "var(--text-body-sm)", color: "var(--color-text-muted)", margin: "20px 0 0" }}>
+          Prefer email? Write to{" "}
+          <a href="mailto:schedule@flatsix.media" style={{ color: "var(--color-text-brand)" }}>
+            schedule@flatsix.media
+          </a>
+          .
+        </p>
       </div>
     </section>
   );

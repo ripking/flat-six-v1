@@ -7,22 +7,22 @@ import { SectionLabel } from "../ds/SectionLabel";
 export function Expertise() {
   const pillars = [
     {
-      id: "expertise-content-strategy",
+      id: "expertise-content-investment-strategy",
       icon: "strategy",
-      title: "Content Strategy",
-      body: "20+ years evaluating thousands of films and TV shows for studio and independent financing. Available for individual titles, libraries, and slates.",
+      title: "Content Investment & Strategy",
+      body: "Studio and independent experience evaluating films, television projects, libraries, and slates for financing, investment, and portfolio decisions.",
     },
     {
-      id: "expertise-finance-operations",
+      id: "expertise-finance-operating-leadership",
       icon: "leaderboard",
-      title: "Finance & Operations",
-      body: "15 years of executive-level experience managing multinational organizations, with a proven record of growing top-line revenue and expanding into new territories.",
+      title: "Finance & Operating Leadership",
+      body: "Senior finance and operations support for media companies navigating growth, financing, transition, or complexity.",
     },
     {
-      id: "expertise-scalable-support",
+      id: "expertise-flexible-senior-support",
       icon: "handshake",
-      title: "Scalable Support",
-      body: "Long-term partnerships or one-off strategic projects to suit your needs. We'll work with you, at whatever scale the engagement calls for.",
+      title: "Flexible Senior Support",
+      body: "Project-based analysis, retained advisory, or fractional leadership shaped around the decision, team, and timeline.",
     },
   ];
   return (

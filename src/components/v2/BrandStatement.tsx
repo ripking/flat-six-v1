@@ -1,15 +1,9 @@
 import React from "react";
-import { StatBlock } from "../ds/StatBlock";
 import { SectionLabel } from "../ds/SectionLabel";
+import { ProofBand } from "./ProofBand";
 
 // Brand statement + stat strip + feature image (dark section).
 export function BrandStatement() {
-  const stats: [string, string][] = [
-    ["$500M+", "Slate Funding Secured"],
-    ["20+", "Years Experience"],
-    ["4", "Franchises Created"],
-    ["24/7", "Advisory Support"],
-  ];
   return (
     <section
       id="about"
@@ -51,21 +45,6 @@ export function BrandStatement() {
             finance, and operations. We serve independent producers, production companies of all
             sizes, major studios, institutional investors and financiers, family offices, and more.
           </p>
-          <div
-            className="fsm-grid-stats"
-            style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(4, 1fr)",
-              gap: 20,
-              marginTop: 44,
-              paddingTop: 36,
-              borderTop: "1px solid var(--green-700)",
-            }}
-          >
-            {stats.map(([v, l]) => (
-              <StatBlock key={l} value={v} label={l} tone="inverse" align="center" />
-            ))}
-          </div>
         </div>
         <img
           src="/images/about-film-set-behind-camera.png"
@@ -79,6 +58,9 @@ export function BrandStatement() {
             display: "block",
           }}
         />
+        <div style={{ gridColumn: "1 / -1", paddingTop: 8 }}>
+          <ProofBand inverse />
+        </div>
       </div>
     </section>
   );

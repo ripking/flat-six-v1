@@ -1,28 +1,24 @@
 {
   "hero": {
-    "heading": "Where Heritage Meets Innovation.",
-    "subheading": "High-performance finance, strategy, and operations consulting for the modern media landscape. Custom on-retainer and ad-hoc solutions for studios, production companies, independent producers, streamers, influencers, and creators.",
-    "cta_button": "View Our Expertise"
+    "heading": "Senior Judgment for Consequential Media Decisions.",
+    "subheading": "From greenlights and slate investments to valuations, operating challenges, and disputes, Flat Six Media brings finance, strategy, and operating experience to the decisions where getting it right matters.",
+    "cta_button": "Discuss Your Decision"
   },
   "about": {
     "heading": "Enduring Value. Modern Execution.",
     "description": "We believe the most successful content is built like the world renowned Porsche flat-six engine: well-balanced, incredibly powerful, and engineered for the kind of enduring performance that turns creative vision into measurable, bottom-line success.\n\nFlat Six Media is a boutique consultancy providing executive caliber support across strategy, finance, and operations functions. We work with independent producers, production companies of all sizes, and major studios. We work across film, television, streaming, video games, sports, and live events. We are available for single engagements and ongoing support on retainer.",
     "stats": [
       {
-        "value": "$500M+",
-        "label": "Slate Funding Secured"
+        "value": "Studio and Independent Perspective",
+        "label": "Experience across studio leadership, independent production, global distribution, and content investment."
       },
       {
-        "value": "20+",
-        "label": "Years Experience"
+        "value": "Decision-Grade Analysis",
+        "label": "Financial modeling and qualitative judgment designed for investment, operating, and dispute-related decisions."
       },
       {
-        "value": "8",
-        "label": "Franchises Created"
-      },
-      {
-        "value": "24/7",
-        "label": "Advisory Support"
+        "value": "Flexible Engagement",
+        "label": "Project-based advisory, retained support, fractional leadership, and specialized assignments."
       }
     ]
   },
@@ -40,9 +36,9 @@
     ]
   },
   "footer_cta": {
-    "heading": "Ready to transform your media business?",
-    "description": "Join the ranks of the world's most innovative media brands and studios. Let's build your future narrative today.",
-    "button": "Request a Consultation"
+    "heading": "What decision is in front of you?",
+    "description": "Tell us what is at stake, where the uncertainty lies, and what decision needs to be made. We will determine whether Flat Six Media is the right fit and what level of support the situation requires.",
+    "button": "Start a Confidential Conversation"
   },
   "services": [
     {
@@ -103,20 +99,20 @@
   "expertise": [
     {
       "id": 1,
-      "title": "Content Strategy",
-      "description": "20+ years of experience, evaluating thousands of films and tv shows for studio and independent financing. Services available for individual titles, libraries, and slates.",
+      "title": "Content Investment & Strategy",
+      "description": "Studio and independent experience evaluating films, television projects, libraries, and slates for financing, investment, and portfolio decisions.",
       "icon": "strategy"
     },
     {
       "id": 2,
-      "title": "Finance & Operations",
-      "description": "Over 10 years of executive level experience managing multi-national orgnaizatiions with a proven track record of increasing top line revenue and successfully expanding into new international territories",
+      "title": "Finance & Operating Leadership",
+      "description": "Senior finance and operations support for media companies navigating growth, financing, transition, or complexity.",
       "icon": "leaderboard"
     },
     {
       "id": 3,
-      "title": "Scalable Support",
-      "description": "Ability to offer long-term partnerships or 'one-off' strategic projects to suit our clients needs. We'll work with you.",
+      "title": "Flexible Senior Support",
+      "description": "Project-based analysis, retained advisory, or fractional leadership shaped around the decision, team, and timeline.",
       "icon": "handshake"
     }
   ],

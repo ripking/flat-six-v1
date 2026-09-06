@@ -102,9 +102,11 @@ export function Header({ onContact }: HeaderProps) {
                 </Link>
               ))}
             </div>
-            <Button variant="accent" size="sm" onClick={onContact}>
-              Contact Us
-            </Button>
+            <div className="fsm-desktop-contact">
+              <Button variant="accent" size="sm" onClick={onContact}>
+                Contact Us
+              </Button>
+            </div>
             {/* Hamburger — visible only on mobile */}
             <button
               type="button"

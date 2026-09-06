@@ -12,9 +12,9 @@ export function Footer({ onContact }: FooterProps) {
     [
       "Expertise",
       [
-        ["Content Strategy", "/#expertise-content-strategy"],
-        ["Finance & Operations", "/#expertise-finance-operations"],
-        ["Scalable Support", "/#expertise-scalable-support"],
+        ["Content Investment & Strategy", "/#expertise-content-investment-strategy"],
+        ["Finance & Operating Leadership", "/#expertise-finance-operating-leadership"],
+        ["Flexible Senior Support", "/#expertise-flexible-senior-support"],
       ],
     ],
     [

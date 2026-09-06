@@ -9,7 +9,7 @@ type StatBlockProps = {
 } & Omit<React.HTMLAttributes<HTMLDivElement>, "style">;
 
 /**
- * Big-number statistic block — "$500M+ / Slate Funding Secured".
+ * Big-number statistic block for concise quantitative proof.
  * Serif display figure over a mono uppercase label.
  */
 export function StatBlock({
