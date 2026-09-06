@@ -31,8 +31,8 @@ $name    = clean($data['name'] ?? '');
 $email   = clean($data['email'] ?? '');
 $company = clean($data['company'] ?? '');
 $service = clean($data['service'] ?? '');
-$notes   = trim((string) ($data['notes'] ?? ''));        // notes can keep line breaks
-$notes   = str_replace(["\r\n", "\r"], "\n", $notes);
+$decision = trim((string) ($data['decision'] ?? ''));     // decision can keep line breaks
+$decision = str_replace(["\r\n", "\r"], "\n", $decision);
 $hp      = clean($data['company_website'] ?? '');         // honeypot (should be empty)
 
 // --- Honeypot: silently succeed for bots ---
@@ -42,20 +42,20 @@ if ($hp !== '') {
 }
 
 // --- Validate ---
-if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $service === '') {
+if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $decision === '') {
     http_response_code(422);
-    echo json_encode(['ok' => false, 'error' => 'Please provide your name, a valid email, and an area of interest.']);
+    echo json_encode(['ok' => false, 'error' => 'Please provide your name, a valid work email, and a brief description of the decision or issue.']);
     exit;
 }
 
 // --- Compose ---
-$subject = 'Consultation Request: ' . $service;
+$subject = 'Website Inquiry: ' . ($service !== '' ? $service : 'General');
 $body    = "New consultation request from flatsix.media\n\n"
          . "Name:    {$name}\n"
          . "Email:   {$email}\n"
          . "Company: " . ($company !== '' ? $company : '—') . "\n"
-         . "Service: {$service}\n\n"
-         . "Notes:\n" . ($notes !== '' ? $notes : '—') . "\n";
+         . "Area:    " . ($service !== '' ? $service : 'Not specified') . "\n\n"
+         . "Decision / opportunity / issue:\n{$decision}\n";
 
 $headers  = "From: {$FROM}\r\n";
 $headers .= "Reply-To: {$name} <{$email}>\r\n";

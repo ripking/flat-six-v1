@@ -310,8 +310,8 @@ export function AISolutions() {
               </p>
             </div>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
-              <Button variant="accent" size="lg" iconRight="arrow_forward" onClick={openContact}>
-                Schedule an AI Opportunity Review
+              <Button className="fsm-mobile-wrap-cta" variant="accent" size="lg" iconRight="arrow_forward" onClick={openContact}>
+                Request an AI Opportunity Review
               </Button>
               <a
                 href="#approach"
@@ -756,7 +756,7 @@ export function AISolutions() {
             <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
               <SectionLabel align="center">Start the Conversation</SectionLabel>
             </div>
-            <h2 style={{ font: "var(--text-h1)", letterSpacing: "var(--tracking-tight)", margin: "0 0 18px" }}>
+            <h2 className="fsm-display-heading" style={{ font: "var(--text-h1)", letterSpacing: "var(--tracking-tight)", margin: "0 0 18px" }}>
               Find the AI Opportunities Worth Pursuing
             </h2>
             <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: "0 auto 30px", maxWidth: 600 }}>
@@ -778,8 +778,8 @@ export function AISolutions() {
               Tell us what your team does repeatedly, where information gets stuck, or which
               decisions take longer than they should.
             </p>
-            <Button variant="primary" size="lg" iconRight="arrow_forward" onClick={openContact}>
-              Schedule an AI Opportunity Review
+            <Button className="fsm-mobile-wrap-cta" variant="primary" size="lg" iconRight="arrow_forward" onClick={openContact}>
+              Request an AI Opportunity Review
             </Button>
             <div style={{ marginTop: 28 }}>
               <Link

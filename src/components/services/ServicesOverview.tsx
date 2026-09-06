@@ -8,7 +8,7 @@ import { Button } from "@/components/ds/Button";
 import { Card } from "@/components/ds/Card";
 import { IconTile } from "@/components/ds/IconTile";
 import { SectionLabel } from "@/components/ds/SectionLabel";
-import { StatBlock } from "@/components/ds/StatBlock";
+import { ProofBand } from "@/components/v2/ProofBand";
 
 const serviceFamilies = [
   {
@@ -267,9 +267,8 @@ export function ServicesOverview() {
               }}
             >
               <p style={{ margin: "0 0 16px" }}>
-                Flat Six Media brings executive-caliber, applied experience to the entertainment and
-                media landscape—where other advisory services often fall short by lacking real-world
-                operating experience inside modern media businesses.
+                Flat Six Media brings senior, applied experience to high-stakes media decisions across
+                content, capital, finance, operations, and special situations.
               </p>
               <p style={{ margin: "0 0 16px" }}>
                 Our services support studios, production companies, independent producers,
@@ -587,20 +586,12 @@ export function ServicesOverview() {
                 <h2 style={{ font: "var(--text-h2)", letterSpacing: "var(--tracking-tight)", margin: "14px 0 18px" }}>
                   Senior judgment without unnecessary overhead.
                 </h2>
-                <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: "0 0 18px", maxWidth: 640 }}>
-                  Flat Six Media brings studio and independent experience across finance, strategy,
-                  operations, greenlight analysis, global distribution, and content investment.
-                </p>
                 <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: 0, maxWidth: 640 }}>
-                  Our structure allows us to deliver a first-class experience, and applied real-world
-                  experience, at a rate that can far undercut other major branded advisory services.
+                  Flat Six Media provides direct access to senior judgment, with the scope and level of
+                  involvement matched to the decision at hand.
                 </p>
               </div>
-              <div className="fsm-grid-stats" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
-                <StatBlock value="$500M+" label="Slate Funding Secured" align="center" />
-                <StatBlock value="20+" label="Years Experience" align="center" />
-                <StatBlock value="4" label="Franchises Created" align="center" />
-              </div>
+              <ProofBand stacked />
             </div>
           </div>
         </section>
@@ -613,7 +604,7 @@ export function ServicesOverview() {
             <div style={{ display: "flex", justifyContent: "center", marginBottom: 18 }}>
               <SectionLabel align="center">Start the Conversation</SectionLabel>
             </div>
-            <h2 style={{ font: "var(--text-h1)", letterSpacing: "var(--tracking-tight)", margin: "0 0 18px" }}>
+            <h2 className="fsm-display-heading" style={{ font: "var(--text-h1)", letterSpacing: "var(--tracking-tight)", margin: "0 0 18px" }}>
               Not sure which engagement fits?
             </h2>
             <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: "0 auto 34px", maxWidth: 580 }}>

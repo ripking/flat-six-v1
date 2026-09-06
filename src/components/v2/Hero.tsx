@@ -1,10 +1,15 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Button } from "../ds/Button";
 
+type HeroProps = {
+  onContact?: () => void;
+};
+
 // Hero — full-bleed cinematic image with overlaid headline.
-export function Hero() {
+export function Hero({ onContact }: HeroProps) {
   return (
     <section
       id="top"
@@ -67,7 +72,7 @@ export function Hero() {
                 color: "var(--brass-300)",
               }}
             >
-              Boutique Media Consultancy
+              Executive Caliber. On Demand.
             </span>
           </div>
           <h1
@@ -82,9 +87,9 @@ export function Hero() {
               margin: "0 0 26px",
             }}
           >
-            Executive Caliber.
+            Senior Judgment for
             <br />
-            On Demand.
+            Consequential Media Decisions.
           </h1>
           <p
             style={{
@@ -95,20 +100,33 @@ export function Hero() {
               margin: "0 0 36px",
             }}
           >
-            High-performance finance, strategy, and operations consulting for the modern media
-            landscape. Custom on-retainer and ad-hoc solutions for studios, production companies,
-            independent producers, streamers, influencers, and creators.
+            From greenlights and slate investments to valuations, operating challenges, and disputes,
+            Flat Six Media brings finance, strategy, and operating experience to the decisions where
+            getting it right matters.
           </p>
-          <Button
-            variant="accent"
-            size="lg"
-            iconRight="arrow_forward"
-            onClick={() =>
-              document.getElementById("services")?.scrollIntoView({ behavior: "smooth" })
-            }
-          >
-            View Our Services
-          </Button>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 14, alignItems: "center" }}>
+            <Button variant="accent" size="lg" iconRight="arrow_forward" onClick={onContact}>
+              Discuss Your Decision
+            </Button>
+            <Link
+              href="/services/"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 10,
+                padding: "16px 32px",
+                border: "var(--border-medium) solid rgba(233,225,208,0.45)",
+                borderRadius: "var(--radius-pill)",
+                color: "var(--cream-50)",
+                font: "var(--text-md)",
+                fontWeight: 600,
+                lineHeight: 1,
+                textDecoration: "none",
+              }}
+            >
+              Explore Advisory Services
+            </Link>
+          </div>
         </div>
       </div>
     </section>

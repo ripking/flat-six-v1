@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div style={{ background: "var(--color-bg)", color: "var(--color-text)" }}>
       <Header onContact={openContact} />
-      <Hero />
+      <Hero onContact={openContact} />
       <Expertise />
       <Services />
       <AIAutomation />
