@@ -305,7 +305,7 @@ export function AISolutions() {
                 build more scalable operations.
               </p>
               <p style={{ margin: 0 }}>
-                We start with the business problem—not the technology—and design systems that fit
+                We start with the business problem, not the technology, and design systems that fit
                 your existing team, tools, and controls.
               </p>
             </div>
@@ -408,7 +408,7 @@ export function AISolutions() {
                 Assess. Build. Manage.
               </h2>
               <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: 0, maxWidth: 620 }}>
-                Three engagements designed to work as a progression—each available on its own. Most
+                Three engagements designed to work as a progression, with each available on its own. Most
                 clients begin with an assessment and continue only where the value is clear.
               </p>
             </div>
@@ -446,7 +446,7 @@ export function AISolutions() {
                           marginTop: 18,
                         }}
                       >
-                        {rung.number} — {rung.label}
+                        {rung.number}: {rung.label}
                       </div>
                     </div>
 
@@ -710,7 +710,7 @@ export function AISolutions() {
                 <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: 0, maxWidth: 500 }}>
                   Media businesses handle unreleased material, contractual obligations, and
                   confidential financial information. Controls are defined as part of the
-                  engagement—not assumed afterward.
+                  engagement, not assumed afterward.
                 </p>
               </div>
               <div
@@ -761,7 +761,7 @@ export function AISolutions() {
             </h2>
             <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: "0 auto 30px", maxWidth: 600 }}>
               Not every workflow needs AI. We help identify the ones where it can create a real
-              operating advantage—and then build the systems required to make that advantage
+              operating advantage, then build the systems required to make that advantage
               dependable.
             </p>
             <p

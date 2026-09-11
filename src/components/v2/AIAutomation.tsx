@@ -12,7 +12,7 @@ export function AIAutomation() {
       icon: "route",
       step: "01",
       title: "Assess",
-      body: "An AI Opportunity Assessment that maps where AI can create measurable value—ranked by business impact, effort, and readiness.",
+      body: "An AI Opportunity Assessment that maps where AI can create measurable value, ranked by business impact, effort, and readiness.",
     },
     {
       id: "ai-implementation",
@@ -26,7 +26,7 @@ export function AIAutomation() {
       icon: "monitoring",
       step: "03",
       title: "Manage",
-      body: "Ongoing operation of the systems we build—monitoring, refinement, training, and reporting as your needs change.",
+      body: "Ongoing operation of the systems we build, including monitoring, refinement, training, and reporting as your needs change.",
     },
   ];
 
@@ -79,7 +79,7 @@ export function AIAutomation() {
           <div>
             <p style={{ font: "var(--text-body)", color: "var(--cream-200)", margin: "0 0 16px", maxWidth: 560 }}>
               Identify and implement practical AI systems for research, analysis, reporting, and
-              operations—designed around the needs of media businesses.
+              operations, all designed around the needs of media businesses.
             </p>
             <p style={{ font: "var(--text-body)", color: "var(--green-300)", margin: 0, maxWidth: 560 }}>
               We start with the business problem, not the technology, and combine technical
