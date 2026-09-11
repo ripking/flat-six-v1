@@ -300,7 +300,7 @@ export function ServicesOverview() {
               </h2>
               <p style={{ font: "var(--text-body)", color: "var(--color-text-muted)", margin: 0, maxWidth: 620 }}>
                 Our work spans content & capital, operations, and specialized advisory. These three
-                service families provide a practical starting point—even when the final engagement
+                service families provide a practical starting point, even when the final engagement
                 draws from more than one discipline.
               </p>
             </div>
