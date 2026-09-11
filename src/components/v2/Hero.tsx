@@ -80,7 +80,7 @@ export function Hero({ onContact }: HeroProps) {
             style={{
               fontFamily: "var(--font-display)",
               fontWeight: 500,
-              fontSize: "clamp(48px, 6vw, 84px)",
+              fontSize: "clamp(46px, 5.5vw, 76px)",
               lineHeight: 1.04,
               letterSpacing: "-0.02em",
               color: "var(--cream-50)",
