@@ -50,6 +50,7 @@ export function ContactDialog({ open, onClose, initialService = "" }: ContactDia
   const successRef = React.useRef<HTMLDivElement>(null);
   const returnFocusRef = React.useRef<HTMLElement | null>(null);
 
+  /* eslint-disable react-hooks/set-state-in-effect -- Form state intentionally resets when the dialog opens. */
   React.useEffect(() => {
     if (!open) return;
 
@@ -102,6 +103,7 @@ export function ContactDialog({ open, onClose, initialService = "" }: ContactDia
       returnFocusRef.current?.focus();
     };
   }, [open, initialService, onClose]);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   React.useEffect(() => {
     if (sent) successRef.current?.focus();

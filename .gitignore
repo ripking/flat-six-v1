@@ -19,6 +19,7 @@
 
 # production
 /build
+/public/.contact-rate-limit/*.json
 
 # misc
 .DS_Store
