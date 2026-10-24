@@ -7,17 +7,25 @@ on:
     branches: [main]
   workflow_dispatch: {} # allows manual "Run workflow" from the Actions tab
 
+# This workflow only reads the repository and deploys through the dedicated SSH key.
+permissions:
+  contents: read
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        # v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
 
       - name: Set up Node
-        uses: actions/setup-node@v4
+        # v4.4.0
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
-          node-version: 20
+          node-version: 24.22.1
           cache: npm
 
       - name: Install dependencies
@@ -26,15 +34,19 @@ jobs:
       - name: Build static export
         run: npm run build # produces ./out
 
-      - name: Deploy to Hostinger via SSH (rsync)
-        uses: easingthemes/ssh-deploy@v5.1.0
-        with:
+      - name: Configure verified SSH deployment
+        env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: 82.198.236.7
-          REMOTE_PORT: 65002
-          REMOTE_USER: u128742652
-          SOURCE: out/ # trailing slash → copy the *contents* of out/
-          TARGET: /home/u128742652/domains/flatsix.media/public_html
-          # Mirror the build output; --delete prunes stale files (e.g. old
-          # hashed _next chunks). public_html holds only generated files.
-          ARGS: "-rltgoDzvO --delete"
+          SSH_KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          install -d -m 700 ~/.ssh
+          printf '%s\n' "$SSH_PRIVATE_KEY" > ~/.ssh/id_deploy
+          printf '%s\n' "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/id_deploy ~/.ssh/known_hosts
+
+      - name: Deploy to Hostinger via verified SSH (rsync)
+        run: |
+          rsync -rltgoDzvO --delete \
+            -e "ssh -i ~/.ssh/id_deploy -p 65002 -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=~/.ssh/known_hosts" \
+            out/ \
+            u128742652@82.198.236.7:/home/u128742652/domains/flatsix.media/public_html
